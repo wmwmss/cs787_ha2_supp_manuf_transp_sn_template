@@ -1,16 +1,18 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 import sys
-sys.path.append(r'//Users/alexbrodsky/Documents/OneDrive\ -\ George\ Mason\ University\ -\ O365\ Production/aaa_python_code')
+#sys.path.append(r'//Users/alexbrodsky/Documents/OneDrive\ -\ George\ Mason\ University\ -\ O365\ Production/aaa_python_code')
 #sys.path.append(r'//Users/alexbrodsky/aaa_python_code')
 import copy
+
 import pyomo.environ as pyo
 from pyomo.environ import *
 import json
 import ams
 #import aaa_dgalPy.lib.dgalPy as dgal
 import importlib.util
-spec = importlib.util.spec_from_file_location("dgal", "/Users/alexbrodsky/Documents/OneDrive - George Mason University - O365 Production/aaa_python_code/aaa_dgalPy/lib/dgalPy.py")
+spec = importlib.util.spec_from_file_location("dgal", "/Users/ethan/OneDrive - George Mason University - O365 Production/Academics/2022Fall/CS787/HA2/cs787_ha2_supp_manuf_transp_sn_template/lib/dgalPy.py")
+#spec = importlib.util.spec_from_file_location("dgal", "/Users/alexbrodsky/Documents/OneDrive - George Mason University - O365 Production/aaa_python_code/aaa_dgalPy/lib/dgalPy.py")
 dgal = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(dgal)
 
