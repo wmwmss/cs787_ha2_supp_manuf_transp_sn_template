@@ -78,7 +78,7 @@ def computeMetrics(shared,root,services):
 # end of Compute Metrics function
 # ------------------------------------------------------------------------------
 def supplierMetrics(supInput):
-    # test
+    '''# test
     supInput = {
       "type": "supplier",
       "inFlow": {},
@@ -97,7 +97,7 @@ def supplierMetrics(supInput):
         }
       }
     }
-    # end of test
+    # end of test'''
 
     type = supInput["type"]
     inFlow = supInput["inFlow"]
@@ -112,7 +112,7 @@ def supplierMetrics(supInput):
     newOutFlow = {mat:{"qty": outFlow[mat]["qty"], "item": outFlow[mat]["item"]} for mat in outFlow}
 
     constraints = flowBoundConstraint(outFlow,newOutFlow)
-    
+
     return {
         "type": type,
         "cost": cost,
@@ -125,14 +125,62 @@ def supplierMetrics(supInput):
 # assumption: there is an input flow for every inQtyPer1out
 
 def manufMetrics(manufInput):
+    # test
+    manufInput = {
+      "type": "manufacturer",
+      "inFlow": {
+        "mat1_manuf1": {
+          "lb": 0,
+          "item": "mat1"
+        },
+        "mat2_manuf1": {
+          "lb": 0,
+          "item": "mat2"
+        }
+      },
+      "outFlow": {
+        "part1_manuf12": {
+          "qty": 300,
+          "lb": 0,
+          "ppu": 1,
+          "item": "part1"
+        },
+        "part2_manuf12": {
+          "qty": 500,
+          "lb": 0,
+          "ppu": 2,
+          "item": "part2"
+        }
+      },
+      "qtyInPer1out": {
+        "part1_manuf12": {
+          "mat1_manuf1": 2,
+          "mat2_manuf1": 1
+        },
+        "part2_manuf12": {
+          "mat2_manuf1": 3
+        }
+      }
+    }
+    # end of test'''
+
     type = manufInput["type"]
     inFlow = manufInput["inFlow"]
     outFlow = manufInput["outFlow"]
     qtyInPer1out = manufInput["qtyInPer1out"]
+
+    ppu = [outFlow[mat]['ppu'] for mat in outFlow]
+    qty = [outFlow[mat]['qty'] for mat in outFlow]
+
+    inQty = {mat:sum([outFlow[part]['qty']*qtyInPer1out[part][mat] for part in outFlow if mat in qtyInPer1out[part]]) for mat in inFlow}
+    inQty
 # replace below with correct computation
-    cost = 1000
-    newInFlow = "TBD"
-    newOutFlow = "TBD"
+    cost = sum([ppu[i] * qty[i] for i in range(len(qty))])
+    #cost
+    newInFlow = {mat:{"qty": inQty[mat], "item": inFlow[mat]["item"]} for mat in inFlow}
+    #newInFlow
+    newOutFlow = {mat:{"qty": outFlow[mat]["qty"], "item": outFlow[mat]["item"]} for mat in outFlow}
+    #newOutFlow
 
     inFlowConstraints = flowBoundConstraint(inFlow,newInFlow)
     outFlowConstraints = flowBoundConstraint(outFlow,newOutFlow)
