@@ -14,7 +14,14 @@ sys.path.append("..")
 # replace below with correct implementation if you'd like to use it in analytic models below
 def flowBoundConstraint(flow,newFlow):
     nonNegativityConstraint = dgal.all([True for mat in newFlow if newFlow[mat]['qty']>=0])
-    lbConstraint = dgal.all([True for mat in newFlow if newFlow[mat]['qty']>=flow[mat]['qty']])
+
+    try:
+        lbs = [mat['lb'] for mat in flow]
+    except:
+        lbConstraint = dgal.all([True for mat in newFlow if newFlow[mat]['qty']>=flow[mat]['lb']])
+    else:
+        lbConstraint = dgal.all([True for mat in newFlow if newFlow[mat]['qty']>=flow[mat]['qty']])
+
     return (nonNegativityConstraint and lbConstraint)
 
 #--------------------------------------------------------------------
@@ -185,6 +192,7 @@ def manufMetrics(manufInput):
     inFlowConstraints = flowBoundConstraint(inFlow,newInFlow)
     outFlowConstraints = flowBoundConstraint(outFlow,newOutFlow)
     constraints = dgal.all([ inFlowConstraints, outFlowConstraints])
+    #constraints
 
     return { "type": type,
              "cost": cost,
@@ -195,23 +203,124 @@ def manufMetrics(manufInput):
 # end of manufMetrics
 #--------------------------------------------------
 def transportMetrics(transportInput, shared):
+    # test
+    transportInput = {
+      "type": "transport",
+      "inFlow": {
+        "mat1_sup1": {
+          "lb": 0,
+          "item": "mat1"
+        },
+        "mat2_sup1": {
+          "lb": 0,
+          "item": "mat2"
+        },
+        "mat1_sup2": {
+          "lb": 0,
+          "item": "mat1"
+        },
+        "mat2_sup2": {
+          "lb": 0,
+          "item": "mat2"
+        }
+      },
+      "outFlow": {
+        "mat1_manuf1": {
+          "lb": 0,
+          "item": "mat1"
+        },
+        "mat2_manuf1": {
+          "lb": 0,
+          "item": "mat2"
+        }
+      },
+      "pplbFromTo": {
+        "Fairfax": {
+          "NYC": 0.5
+        },
+        "LA": {
+          "NYC": 2.5
+        }
+      },
+      "orders": [
+        {
+          "in": "mat1_sup1",
+          "out": "mat1_manuf1",
+          "sender": "sup1",
+          "recipient": "manuf1",
+          "qty": 600
+        },
+        {
+          "in": "mat2_sup1",
+          "out": "mat2_manuf1",
+          "sender": "sup1",
+          "recipient": "manuf1",
+          "qty": 700
+        },
+        {
+          "in": "mat1_sup2",
+          "out": "mat1_manuf1",
+          "sender": "sup2",
+          "recipient": "manuf1",
+          "qty": 400
+        },
+        {
+          "in": "mat2_sup2",
+          "out": "mat2_manuf1",
+          "sender": "sup2",
+          "recipient": "manuf1",
+          "qty": 600
+        }
+      ]
+    }
+    # end of test
+
     type = transportInput["type"]
     inFlow = transportInput["inFlow"]
     outFlow = transportInput["outFlow"]
     pplbFromTo = transportInput["pplbFromTo"]
     orders = transportInput["orders"]
 # replace below with correct implementation. Note: it is based on transportation orders
-    newInFlow = "TBD"
-    newOutFlow = "TBD"
+    newInFlow = dict()
+    for f in inFlow:
+        qty = sum([ o["qty"] for o in orders if o["in"] == f ])
+        newInFlow.update({f: {"qty": qty, "item": inFlow[f]["item"]} })
+
+    newOutFlow = dict()
+    for f in outFlow:
+        qty = sum([ o["qty"] for o in orders if o["out"] == f ])
+        newOutFlow.update({f: {"qty": qty, "item": outFlow[f]["item"]} })
 # replace below with computation of all source locations
-    sourceLocations = "TBD"
+    sourceLocations = set([shared["busEntities"][o["sender"]]["loc"] for o in orders])
 # replace below with computation of a structure for all source-destination pairs in orders
-    destsPerSource = "TBD"
+    destsPerSource = dict()
+    for s in sourceLocations:
+        dests = set()
+        for o in orders:
+            senderLoc = shared["busEntities"][o["sender"]]["loc"]
+            recipientLoc = shared["busEntities"][o["recipient"]]["loc"]
+            if senderLoc == s:
+                dests.add(recipientLoc)
+        destsPerSource.update({s: list(dests)})
+
 # replace below with computation of total weight for every source-destination pair according to orders
-    weightCostPerSourceDest = "TBD"
+    weightCostPerSourceDest = list()
+    for s in sourceLocations:
+        for d in destsPerSource[s]:
+            weight = sum([
+                unitWeight * o["qty"]
+                for o in orders
+                if (shared["busEntities"][o["sender"]]["loc"] == s
+                    and shared["busEntities"][o["recipient"]]["loc"])
+                for unitWeight in [shared["items"][inFlow[o["in"]]["item"]]["weight"]]
+            ])
+            cost = pplbFromTo[s][d] * weight
+            weightCostPerSourceDest.append({"source": s, "dest": d, "weight": weight, "cost": cost })
+
 # replace below with transportation cost computation, based on, for each source-destination pair,
 # on total weight and price per pound (pplb)
-    cost = 1000
+    cost = sum([ sd["cost"] for sd in weightCostPerSourceDest ])
+
 
     inFlowConstraints = flowBoundConstraint(inFlow,newInFlow)
     outFlowConstraints = flowBoundConstraint(outFlow,newOutFlow)
