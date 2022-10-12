@@ -132,7 +132,7 @@ def supplierMetrics(supInput):
 # assumption: there is an input flow for every inQtyPer1out
 
 def manufMetrics(manufInput):
-    # test
+    '''# test
     manufInput = {
       "type": "manufacturer",
       "inFlow": {
@@ -203,7 +203,7 @@ def manufMetrics(manufInput):
 # end of manufMetrics
 #--------------------------------------------------
 def transportMetrics(transportInput, shared):
-    # test
+    '''# test
     transportInput = {
       "type": "transport",
       "inFlow": {
@@ -273,7 +273,50 @@ def transportMetrics(transportInput, shared):
         }
       ]
     }
-    # end of test
+
+    shared = {
+      "busEntities": {
+        "sup1": {
+          "loc": "Fairfax"
+        },
+        "sup2": {
+          "loc": "LA"
+        },
+        "transp1": {
+          "loc": "Seattle"
+        },
+        "transp2": {
+          "loc": "Baltimore"
+        },
+        "manuf1": {
+          "loc": "NYC"
+        },
+        "manuf2": {
+          "loc": "NYC"
+        }
+      },
+      "items": {
+        "mat1": {
+          "weight": 1
+        },
+        "mat2": {
+          "weight": 2
+        },
+        "part1": {
+          "weight": 7
+        },
+        "part2": {
+          "weight": 6
+        },
+        "prod1": {
+          "weight": 8
+        },
+        "prod2": {
+          "weight": 9
+        }
+      }
+    }
+    # end of test'''
 
     type = transportInput["type"]
     inFlow = transportInput["inFlow"]
@@ -292,6 +335,7 @@ def transportMetrics(transportInput, shared):
         newOutFlow.update({f: {"qty": qty, "item": outFlow[f]["item"]} })
 # replace below with computation of all source locations
     sourceLocations = set([shared["busEntities"][o["sender"]]["loc"] for o in orders])
+    sourceLocations
 # replace below with computation of a structure for all source-destination pairs in orders
     destsPerSource = dict()
     for s in sourceLocations:
@@ -302,7 +346,7 @@ def transportMetrics(transportInput, shared):
             if senderLoc == s:
                 dests.add(recipientLoc)
         destsPerSource.update({s: list(dests)})
-
+    destsPerSource
 # replace below with computation of total weight for every source-destination pair according to orders
     weightCostPerSourceDest = list()
     for s in sourceLocations:
@@ -316,11 +360,11 @@ def transportMetrics(transportInput, shared):
             ])
             cost = pplbFromTo[s][d] * weight
             weightCostPerSourceDest.append({"source": s, "dest": d, "weight": weight, "cost": cost })
-
+    weightCostPerSourceDest
 # replace below with transportation cost computation, based on, for each source-destination pair,
 # on total weight and price per pound (pplb)
     cost = sum([ sd["cost"] for sd in weightCostPerSourceDest ])
-
+    cost
 
     inFlowConstraints = flowBoundConstraint(inFlow,newInFlow)
     outFlowConstraints = flowBoundConstraint(outFlow,newOutFlow)
@@ -333,7 +377,233 @@ def transportMetrics(transportInput, shared):
     }
 # replace below with correct implementation
 def combinedSupply(input):
-    return "TBD"
+    # test
+    input = {
+      "shared": {
+        "busEntities": {
+          "sup1": {
+            "loc": "Fairfax"
+          },
+          "sup2": {
+            "loc": "LA"
+          },
+          "transp1": {
+            "loc": "Seattle"
+          },
+          "transp2": {
+            "loc": "Baltimore"
+          },
+          "manuf1": {
+            "loc": "NYC"
+          },
+          "manuf2": {
+            "loc": "NYC"
+          }
+        },
+        "items": {
+          "mat1": {
+            "weight": 1
+          },
+          "mat2": {
+            "weight": 2
+          },
+          "part1": {
+            "weight": 7
+          },
+          "part2": {
+            "weight": 6
+          },
+          "prod1": {
+            "weight": 8
+          },
+          "prod2": {
+            "weight": 9
+          }
+        }
+      },
+      "rootService": "combinedSupply",
+      "services": {
+        "combinedSupply": {
+          "type": "composite",
+          "inFlow": {},
+          "outFlow": {
+            "mat1_sup1": {
+              "lb": 0,
+              "item": "mat1"
+            },
+            "mat2_sup1": {
+              "lb": 0,
+              "item": "mat2"
+            },
+            "mat1_sup2": {
+              "lb": 0,
+              "item": "mat1"
+            },
+            "mat2_sup2": {
+              "lb": 0,
+              "item": "mat2"
+            }
+          },
+          "subServices": [
+            "sup1",
+            "sup2"
+          ]
+        },
+        "sup1": {
+          "type": "supplier",
+          "inFlow": {},
+          "outFlow": {
+            "mat1_sup1": {
+              "qty": 2000,
+              "lb": 0,
+              "ppu": 5,
+              "item": "mat1"
+            },
+            "mat2_sup1": {
+              "qty": 1500,
+              "lb": 0,
+              "ppu": 4,
+              "item": "mat2"
+            }
+          }
+        },
+        "sup2": {
+          "type": "supplier",
+          "inFlow": {},
+          "outFlow": {
+            "mat1_sup2": {
+              "qty": 500,
+              "lb": 0,
+              "ppu": 2,
+              "item": "mat1"
+            },
+            "mat2_sup2": {
+              "qty": 1300,
+              "lb": 0,
+              "ppu": 3,
+              "item": "mat2"
+            }
+          }
+        }
+      }
+    }
+    # end of test
+
+    rootService = input["rootService"]
+
+    out = {}
+    for sup in input["services"]:
+        #print(sup)
+        if input["services"][sup]["type"]!="composite":
+            out.update({sup:supplierMetrics(input["services"][sup])})
+    out
+    cost = sum([out[s]["cost"] for s in out])
+    #cost
+    constraints = dgal.all([out[s]["constraints"] for s in out])
+    constraints
+
+    services = {}
+    
+
+    return {
+      "cost": cost,
+      "constraints": constraints,
+      "rootService": rootService,
+      "services": {
+        "combinedSupply": {
+          "type": "composite",
+          "cost": 20900,
+          "constraints": true,
+          "inFlow": {},
+          "outFlow": {
+            "mat1_sup1": {
+              "qty": 2000,
+              "item": "mat1"
+            },
+            "mat2_sup1": {
+              "qty": 1500,
+              "item": "mat2"
+            },
+            "mat1_sup2": {
+              "qty": 500,
+              "item": "mat1"
+            },
+            "mat2_sup2": {
+              "qty": 1300,
+              "item": "mat2"
+            }
+          },
+          "subServices": [
+            "sup1",
+            "sup2"
+          ],
+          "debug": {
+            "flowKeys": [
+              "mat1_sup1",
+              "mat2_sup1",
+              "mat1_sup2",
+              "mat2_sup2"
+            ],
+            "subServiceMetrics": {
+              "sup1": {
+                "type": "supplier",
+                "cost": 16000,
+                "constraints": true,
+                "inFlow": {},
+                "outFlow": {
+                  "mat1_sup1": {
+                    "qty": 2000,
+                    "item": "mat1"
+                  },
+                  "mat2_sup1": {
+                    "qty": 1500,
+                    "item": "mat2"
+                  }
+                }
+              },
+              "sup2": {
+                "type": "supplier",
+                "cost": 4900,
+                "constraints": true,
+                "inFlow": {},
+                "outFlow": {
+                  "mat1_sup2": {
+                    "qty": 500,
+                    "item": "mat1"
+                  },
+                  "mat2_sup2": {
+                    "qty": 1300,
+                    "item": "mat2"
+                  }
+                }
+              }
+            },
+            "subServicesFlowSupply": {
+              "mat1_sup1": 2000,
+              "mat2_sup1": 1500,
+              "mat1_sup2": 500,
+              "mat2_sup2": 1300
+            },
+            "subServicesFlowDemand": {
+              "mat1_sup1": 0,
+              "mat2_sup1": 0,
+              "mat1_sup2": 0,
+              "mat2_sup2": 0
+            },
+            "inFlowKeys": [],
+            "outFlowKeys": [
+              "mat1_sup1",
+              "mat2_sup1",
+              "mat1_sup2",
+              "mat2_sup2"
+            ],
+            "internalFlowKeys": null,
+            "internalSupplySatisfiesDemand": true,
+            "inFlowConstraints": true,
+            "outFlowConstraints": true,
+            "subServiceConstraints": true
+          }
+
 def combinedManuf(input):
     return "TBD"
 def combinedTransp(input):
