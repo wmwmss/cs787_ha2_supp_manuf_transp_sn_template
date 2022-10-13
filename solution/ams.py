@@ -491,118 +491,51 @@ def combinedSupply(input):
 
     rootService = input["rootService"]
 
-    out = {}
+    sub = {}
     for sup in input["services"]:
         #print(sup)
         if input["services"][sup]["type"]!="composite":
-            out.update({sup:supplierMetrics(input["services"][sup])})
-    out
-    cost = sum([out[s]["cost"] for s in out])
+            sub.update({sup:supplierMetrics(input["services"][sup])})
+    sub
+    newRootOutFlowDict = {}
+    newRootOutFlow = {
+        newRootOutFlowDict.update(sub[s]["outFlow"])
+        for s in sub
+    }
+    newRootOutFlowDict
+
+    cost = sum([sub[s]["cost"] for s in sub])
     #cost
-    constraints = dgal.all([out[s]["constraints"] for s in out])
-    constraints
+    constraints = dgal.all([sub[s]["constraints"] for s in sub])
+    #constraints
+
+    subServicesList = [s for s in sub]
+    subServicesList
+
+    mainService = {
+        rootService:{
+            "type": input["services"][rootService]["type"],
+            "cost": cost,
+            "constraints": constraints,
+            "inFlow": {},
+            "outFlow": newRootOutFlowDict,
+            "subServices": subServicesList
+        }
+    }
+    mainService
+
 
     services = {}
-    
+    services.update(mainService)
+    services.update(sub)
+    services
 
     return {
       "cost": cost,
       "constraints": constraints,
       "rootService": rootService,
-      "services": {
-        "combinedSupply": {
-          "type": "composite",
-          "cost": 20900,
-          "constraints": true,
-          "inFlow": {},
-          "outFlow": {
-            "mat1_sup1": {
-              "qty": 2000,
-              "item": "mat1"
-            },
-            "mat2_sup1": {
-              "qty": 1500,
-              "item": "mat2"
-            },
-            "mat1_sup2": {
-              "qty": 500,
-              "item": "mat1"
-            },
-            "mat2_sup2": {
-              "qty": 1300,
-              "item": "mat2"
-            }
-          },
-          "subServices": [
-            "sup1",
-            "sup2"
-          ],
-          "debug": {
-            "flowKeys": [
-              "mat1_sup1",
-              "mat2_sup1",
-              "mat1_sup2",
-              "mat2_sup2"
-            ],
-            "subServiceMetrics": {
-              "sup1": {
-                "type": "supplier",
-                "cost": 16000,
-                "constraints": true,
-                "inFlow": {},
-                "outFlow": {
-                  "mat1_sup1": {
-                    "qty": 2000,
-                    "item": "mat1"
-                  },
-                  "mat2_sup1": {
-                    "qty": 1500,
-                    "item": "mat2"
-                  }
-                }
-              },
-              "sup2": {
-                "type": "supplier",
-                "cost": 4900,
-                "constraints": true,
-                "inFlow": {},
-                "outFlow": {
-                  "mat1_sup2": {
-                    "qty": 500,
-                    "item": "mat1"
-                  },
-                  "mat2_sup2": {
-                    "qty": 1300,
-                    "item": "mat2"
-                  }
-                }
-              }
-            },
-            "subServicesFlowSupply": {
-              "mat1_sup1": 2000,
-              "mat2_sup1": 1500,
-              "mat1_sup2": 500,
-              "mat2_sup2": 1300
-            },
-            "subServicesFlowDemand": {
-              "mat1_sup1": 0,
-              "mat2_sup1": 0,
-              "mat1_sup2": 0,
-              "mat2_sup2": 0
-            },
-            "inFlowKeys": [],
-            "outFlowKeys": [
-              "mat1_sup1",
-              "mat2_sup1",
-              "mat1_sup2",
-              "mat2_sup2"
-            ],
-            "internalFlowKeys": null,
-            "internalSupplySatisfiesDemand": true,
-            "inFlowConstraints": true,
-            "outFlowConstraints": true,
-            "subServiceConstraints": true
-          }
+      "services": services
+      }
 
 def combinedManuf(input):
     return "TBD"
