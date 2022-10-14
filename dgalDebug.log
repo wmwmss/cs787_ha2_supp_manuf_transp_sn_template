@@ -4613,3 +4613,123 @@ No value for uninitialized NumericValue object int[0]
 ERROR:pyomo.core:evaluating object as numeric value: int[0] + int[2]
     (object: <class 'pyomo.core.expr.numeric_expr.SumExpression'>)
 No value for uninitialized NumericValue object int[0]
+DEBUG:pyomo.core:Constructing ConcreteModel 'ConcreteModel', from data=None
+DEBUG:pyomo.core:Constructing RangeSet, name=FiniteScalarRangeSet, from data=None
+DEBUG:pyomo.core:Constructing RangeSet, name=FiniteScalarRangeSet, from data=None
+DEBUG:pyomo.core:Constructing IndexedVar 'real' on [Model] from data=None
+DEBUG:pyomo.core:Constructing Variable, name=real, from data=None
+DEBUG:pyomo.core:Constructed component ''[Model].real'':
+real : Size=0, Index=realI
+    Key : Lower : Value : Upper : Fixed : Stale : Domain
+
+DEBUG:pyomo.core:Constructing IndexedVar 'int' on [Model] from data=None
+DEBUG:pyomo.core:Constructing Variable, name=int, from data=None
+DEBUG:pyomo.core:Constructed component ''[Model].int'':
+int : Size=4, Index=intI
+    Key : Lower : Value : Upper : Fixed : Stale : Domain
+      0 :  None :  None :  None : False :  True : Integers
+      1 :  None :  None :  None : False :  True : Integers
+      2 :  None :  None :  None : False :  True : Integers
+      3 :  None :  None :  None : False :  True : Integers
+
+DEBUG:pyomo.core:Constructing ConcreteModel 'ConcreteModel', from data=None
+DEBUG:pyomo.core:Constructing RangeSet, name=FiniteScalarRangeSet, from data=None
+DEBUG:pyomo.core:Constructing RangeSet, name=FiniteScalarRangeSet, from data=None
+DEBUG:pyomo.core:Constructing IndexedVar 'real' on [Model] from data=None
+DEBUG:pyomo.core:Constructing Variable, name=real, from data=None
+DEBUG:pyomo.core:Constructed component ''[Model].real'':
+real : Size=0, Index=realI
+    Key : Lower : Value : Upper : Fixed : Stale : Domain
+
+DEBUG:pyomo.core:Constructing IndexedVar 'int' on [Model] from data=None
+DEBUG:pyomo.core:Constructing Variable, name=int, from data=None
+DEBUG:pyomo.core:Constructed component ''[Model].int'':
+int : Size=4, Index=intI
+    Key : Lower : Value : Upper : Fixed : Stale : Domain
+      0 :  None :  None :  None : False :  True : Integers
+      1 :  None :  None :  None : False :  True : Integers
+      2 :  None :  None :  None : False :  True : Integers
+      3 :  None :  None :  None : False :  True : Integers
+
+DEBUG:pyomo.core:Constructing ConcreteModel 'ConcreteModel', from data=None
+DEBUG:pyomo.core:Constructing RangeSet, name=FiniteScalarRangeSet, from data=None
+DEBUG:pyomo.core:Constructing RangeSet, name=FiniteScalarRangeSet, from data=None
+DEBUG:pyomo.core:Constructing IndexedVar 'real' on [Model] from data=None
+DEBUG:pyomo.core:Constructing Variable, name=real, from data=None
+DEBUG:pyomo.core:Constructed component ''[Model].real'':
+real : Size=0, Index=realI
+    Key : Lower : Value : Upper : Fixed : Stale : Domain
+
+DEBUG:pyomo.core:Constructing IndexedVar 'int' on [Model] from data=None
+DEBUG:pyomo.core:Constructing Variable, name=int, from data=None
+DEBUG:pyomo.core:Constructed component ''[Model].int'':
+int : Size=4, Index=intI
+    Key : Lower : Value : Upper : Fixed : Stale : Domain
+      0 :  None :  None :  None : False :  True : Integers
+      1 :  None :  None :  None : False :  True : Integers
+      2 :  None :  None :  None : False :  True : Integers
+      3 :  None :  None :  None : False :  True : Integers
+
+DEBUG:pyomo.core:Constructing ConcreteModel 'ConcreteModel', from data=None
+DEBUG:pyomo.core:Constructing RangeSet, name=FiniteScalarRangeSet, from data=None
+DEBUG:pyomo.core:Constructing RangeSet, name=FiniteScalarRangeSet, from data=None
+DEBUG:pyomo.core:Constructing IndexedVar 'real' on [Model] from data=None
+DEBUG:pyomo.core:Constructing Variable, name=real, from data=None
+DEBUG:pyomo.core:Constructed component ''[Model].real'':
+real : Size=0, Index=realI
+    Key : Lower : Value : Upper : Fixed : Stale : Domain
+
+DEBUG:pyomo.core:Constructing IndexedVar 'int' on [Model] from data=None
+DEBUG:pyomo.core:Constructing Variable, name=int, from data=None
+DEBUG:pyomo.core:Constructed component ''[Model].int'':
+int : Size=4, Index=intI
+    Key : Lower : Value : Upper : Fixed : Stale : Domain
+      0 :  None :  None :  None : False :  True : Integers
+      1 :  None :  None :  None : False :  True : Integers
+      2 :  None :  None :  None : False :  True : Integers
+      3 :  None :  None :  None : False :  True : Integers
+
+DEBUG:pyomo.core:Constructing ConcreteModel 'ConcreteModel', from data=None
+DEBUG:pyomo.core:Constructing RangeSet, name=FiniteScalarRangeSet, from data=None
+DEBUG:pyomo.core:Constructing RangeSet, name=FiniteScalarRangeSet, from data=None
+DEBUG:pyomo.core:Constructing IndexedVar 'real' on [Model] from data=None
+DEBUG:pyomo.core:Constructing Variable real
+DEBUG:pyomo.core:Constructed component ''[Model].real'':
+real : Size=0, Index=realI
+    Key : Lower : Value : Upper : Fixed : Stale : Domain
+
+DEBUG:pyomo.core:Constructing IndexedVar 'int' on [Model] from data=None
+DEBUG:pyomo.core:Constructing Variable int
+DEBUG:pyomo.core:Constructed component ''[Model].int'':
+int : Size=4, Index=intI
+    Key : Lower : Value : Upper : Fixed : Stale : Domain
+      0 :  None :  None :  None : False :  True : Integers
+      1 :  None :  None :  None : False :  True : Integers
+      2 :  None :  None :  None : False :  True : Integers
+      3 :  None :  None :  None : False :  True : Integers
+
+ERROR:pyomo.core:evaluating object as numeric value: int[0]
+    (object: <class 'pyomo.core.base.var._GeneralVarData'>)
+No value for uninitialized NumericValue object int[0]
+ERROR:pyomo.core:evaluating object as numeric value: int[0] + int[2]
+    (object: <class 'pyomo.core.expr.numeric_expr.SumExpression'>)
+No value for uninitialized NumericValue object int[0]
+DEBUG:pyomo.core:Constructing ConcreteModel 'ConcreteModel', from data=None
+DEBUG:pyomo.core:Constructing RangeSet, name=FiniteScalarRangeSet, from data=None
+DEBUG:pyomo.core:Constructing RangeSet, name=FiniteScalarRangeSet, from data=None
+DEBUG:pyomo.core:Constructing IndexedVar 'real' on [Model] from data=None
+DEBUG:pyomo.core:Constructing Variable, name=real, from data=None
+DEBUG:pyomo.core:Constructed component ''[Model].real'':
+real : Size=0, Index=realI
+    Key : Lower : Value : Upper : Fixed : Stale : Domain
+
+DEBUG:pyomo.core:Constructing IndexedVar 'int' on [Model] from data=None
+DEBUG:pyomo.core:Constructing Variable, name=int, from data=None
+DEBUG:pyomo.core:Constructed component ''[Model].int'':
+int : Size=4, Index=intI
+    Key : Lower : Value : Upper : Fixed : Stale : Domain
+      0 :  None :  None :  None : False :  True : Integers
+      1 :  None :  None :  None : False :  True : Integers
+      2 :  None :  None :  None : False :  True : Integers
+      3 :  None :  None :  None : False :  True : Integers
+
