@@ -377,7 +377,7 @@ def transportMetrics(transportInput, shared):
     }
 # replace below with correct implementation
 def combinedSupply(input):
-    # test
+    '''# test
     input = {
       "shared": {
         "busEntities": {
@@ -487,7 +487,7 @@ def combinedSupply(input):
         }
       }
     }
-    # end of test
+    # end of test'''
 
     rootService = input["rootService"]
 
@@ -538,6 +538,538 @@ def combinedSupply(input):
       }
 
 def combinedManuf(input):
-    return "TBD"
+    '''# test
+    input = {
+      "shared": {
+        "busEntities": {
+          "sup1": {
+            "loc": "Fairfax"
+          },
+          "sup2": {
+            "loc": "LA"
+          },
+          "transp1": {
+            "loc": "Seattle"
+          },
+          "transp2": {
+            "loc": "Baltimore"
+          },
+          "manuf1": {
+            "loc": "NYC"
+          },
+          "manuf2": {
+            "loc": "NYC"
+          }
+        },
+        "items": {
+          "mat1": {
+            "weight": 1
+          },
+          "mat2": {
+            "weight": 2
+          },
+          "part1": {
+            "weight": 7
+          },
+          "part2": {
+            "weight": 6
+          },
+          "prod1": {
+            "weight": 8
+          },
+          "prod2": {
+            "weight": 9
+          }
+        }
+      },
+      "rootService": "combinedManuf",
+      "services": {
+        "combinedManuf": {
+          "type": "composite",
+          "inFlow": {
+            "mat1_manuf1": {
+              "lb": 0,
+              "item": "mat1"
+            },
+            "mat2_manuf1": {
+              "lb": 0,
+              "item": "mat2"
+            }
+          },
+          "outFlow": {
+            "prod1_manuf2": {
+              "lb": 0,
+              "item": "prod1"
+            },
+            "prod2_manuf2": {
+              "lb": 0,
+              "item": "prod2"
+            }
+          },
+          "subServices": [
+            "tier1manuf",
+            "tier2manuf"
+          ]
+        },
+        "tier1manuf": {
+          "type": "manufacturer",
+          "inFlow": {
+            "mat1_manuf1": {
+              "lb": 0,
+              "item": "mat1"
+            },
+            "mat2_manuf1": {
+              "lb": 0,
+              "item": "mat2"
+            }
+          },
+          "outFlow": {
+            "part1_manuf12": {
+              "qty": 300,
+              "lb": 0,
+              "ppu": 1,
+              "item": "part1"
+            },
+            "part2_manuf12": {
+              "qty": 500,
+              "lb": 0,
+              "ppu": 2,
+              "item": "part2"
+            }
+          },
+          "qtyInPer1out": {
+            "part1_manuf12": {
+              "mat1_manuf1": 2,
+              "mat2_manuf1": 1
+            },
+            "part2_manuf12": {
+              "mat2_manuf1": 3
+            }
+          }
+        },
+        "tier2manuf": {
+          "type": "manufacturer",
+          "inFlow": {
+            "part1_manuf12": {
+              "lb": 0,
+              "item": "part1"
+            },
+            "part2_manuf12": {
+              "lb": 0,
+              "item": "part2"
+            }
+          },
+          "outFlow": {
+            "prod1_manuf2": {
+              "qty": 100,
+              "lb": 0,
+              "ppu": 5,
+              "item": "prod1"
+            },
+            "prod2_manuf2": {
+              "qty": 200,
+              "lb": 0,
+              "ppu": 6,
+              "item": "prod2"
+            }
+          },
+          "qtyInPer1out": {
+            "prod1_manuf2": {
+              "part1_manuf12": 3,
+              "part2_manuf12": 1
+            },
+            "prod2_manuf2": {
+              "part2_manuf12": 2
+            }
+          }
+        }
+      }
+    }
+    # end of test data'''
+
+    rootService = input["rootService"]
+
+    sub = {}
+    for sup in input["services"]:
+        #print(sup)
+        if input["services"][sup]["type"]!="composite":
+            sub.update({sup:manufMetrics(input["services"][sup])})
+    sub
+    newRootInFlowDict = {}
+    newRootInFlow = {
+        newRootInFlowDict.update(sub[s]["inFlow"])
+        for s in sub
+        if s == "tier1manuf"
+    }
+    newRootInFlowDict
+
+    newRootOutFlowDict = {}
+    newRootOutFlow = {
+        newRootOutFlowDict.update(sub[s]["outFlow"])
+        for s in sub
+        if s == "tier2manuf"
+    }
+    newRootOutFlowDict
+
+    cost = sum([sub[s]["cost"] for s in sub])
+    #cost
+
+    flowConstraints = dgal.all([
+        sub[s]["outFlow"].keys() == sub[s1]["inFlow"].keys()
+        for s in sub
+        for s1 in sub
+        if sub[s]["type"] == "manufacturer" and sub[s1]["type"] == "manufacturer"
+        and s == "tier1manuf" and s1 == "tier2manuf"
+        ])
+    flowConstraints
+
+    quantifyConstraints = dgal.all([
+        sub[s]["outFlow"][k] == sub[s1]["inFlow"][k]
+        for s in sub
+        for s1 in sub
+        for k in sub[s]["outFlow"]
+        if sub[s]["type"] == "manufacturer" and sub[s1]["type"] == "manufacturer"
+        and s == "tier1manuf" and s1 == "tier2manuf"
+        ])
+    quantifyConstraints
+
+    subConstraints = dgal.all([sub[s]["constraints"] for s in sub])
+    constraints = (flowConstraints and quantifyConstraints and subConstraints)
+    constraints
+
+    subServicesList = [s for s in sub]
+    subServicesList
+
+    mainService = {
+        rootService:{
+            "type": input["services"][rootService]["type"],
+            "cost": cost,
+            "constraints": constraints,
+            "inFlow": newRootInFlowDict,
+            "outFlow": newRootOutFlowDict,
+            "subServices": subServicesList
+        }
+    }
+    mainService
+
+
+    services = {}
+    services.update(mainService)
+    services.update(sub)
+    services
+
+    return {
+      "cost": cost,
+      "constraints": constraints,
+      "rootService": rootService,
+      "services": services
+      }
+
 def combinedTransp(input):
-    return "TBD"
+    '''# test
+    input = {
+      "shared": {
+        "busEntities": {
+          "sup1": {
+            "loc": "Fairfax"
+          },
+          "sup2": {
+            "loc": "LA"
+          },
+          "transp1": {
+            "loc": "Seattle"
+          },
+          "transp2": {
+            "loc": "Baltimore"
+          },
+          "manuf1": {
+            "loc": "NYC"
+          },
+          "manuf2": {
+            "loc": "NYC"
+          }
+        },
+        "items": {
+          "mat1": {
+            "weight": 1
+          },
+          "mat2": {
+            "weight": 2
+          },
+          "part1": {
+            "weight": 7
+          },
+          "part2": {
+            "weight": 6
+          },
+          "prod1": {
+            "weight": 8
+          },
+          "prod2": {
+            "weight": 9
+          }
+        }
+      },
+      "rootService": "combinedTransport",
+      "services": {
+        "combinedTransport": {
+          "type": "composite",
+          "inFlow": {
+            "mat1_sup1": {
+              "lb": 0,
+              "item": "mat1"
+            },
+            "mat2_sup1": {
+              "lb": 0,
+              "item": "mat2"
+            },
+            "mat1_sup2": {
+              "lb": 0,
+              "item": "mat1"
+            },
+            "mat2_sup2": {
+              "lb": 0,
+              "item": "mat2"
+            }
+          },
+          "outFlow": {
+            "mat1_manuf1": {
+              "lb": 0,
+              "item": "mat1"
+            },
+            "mat2_manuf1": {
+              "lb": 0,
+              "item": "mat2"
+            }
+          },
+          "subServices": [
+            "transp1",
+            "transp2"
+          ]
+        },
+        "transp1": {
+          "type": "transport",
+          "inFlow": {
+            "mat1_sup1": {
+              "lb": 0,
+              "item": "mat1"
+            },
+            "mat2_sup1": {
+              "lb": 0,
+              "item": "mat2"
+            },
+            "mat1_sup2": {
+              "lb": 0,
+              "item": "mat1"
+            },
+            "mat2_sup2": {
+              "lb": 0,
+              "item": "mat2"
+            }
+          },
+          "outFlow": {
+            "mat1_manuf1": {
+              "lb": 0,
+              "item": "mat1"
+            },
+            "mat2_manuf1": {
+              "lb": 0,
+              "item": "mat2"
+            }
+          },
+          "pplbFromTo": {
+            "Fairfax": {
+              "NYC": 0.5
+            },
+            "LA": {
+              "NYC": 2.5
+            }
+          },
+          "orders": [
+            {
+              "in": "mat1_sup1",
+              "out": "mat1_manuf1",
+              "sender": "sup1",
+              "recipient": "manuf1",
+              "qty": 600
+            },
+            {
+              "in": "mat2_sup1",
+              "out": "mat2_manuf1",
+              "sender": "sup1",
+              "recipient": "manuf1",
+              "qty": 700
+            },
+            {
+              "in": "mat1_sup2",
+              "out": "mat1_manuf1",
+              "sender": "sup2",
+              "recipient": "manuf1",
+              "qty": 400
+            },
+            {
+              "in": "mat2_sup2",
+              "out": "mat2_manuf1",
+              "sender": "sup2",
+              "recipient": "manuf1",
+              "qty": 600
+            }
+          ]
+        },
+        "transp2": {
+          "type": "transport",
+          "inFlow": {
+            "mat1_sup1": {
+              "lb": 0,
+              "item": "mat1"
+            },
+            "mat2_sup1": {
+              "lb": 0,
+              "item": "mat2"
+            },
+            "mat1_sup2": {
+              "lb": 0,
+              "item": "mat1"
+            },
+            "mat2_sup2": {
+              "lb": 0,
+              "item": "mat2"
+            }
+          },
+          "outFlow": {
+            "mat1_manuf1": {
+              "lb": 0,
+              "item": "mat1"
+            },
+            "mat2_manuf1": {
+              "lb": 0,
+              "item": "mat2"
+            }
+          },
+          "pplbFromTo": {
+            "Fairfax": {
+              "NYC": 0.1
+            },
+            "LA": {
+              "NYC": 2
+            }
+          },
+          "orders": [
+            {
+              "in": "mat1_sup1",
+              "out": "mat1_manuf1",
+              "sender": "sup1",
+              "recipient": "manuf1",
+              "qty": 0
+            },
+            {
+              "in": "mat2_sup1",
+              "out": "mat2_manuf1",
+              "sender": "sup1",
+              "recipient": "manuf1",
+              "qty": 0
+            },
+            {
+              "in": "mat1_sup2",
+              "out": "mat1_manuf1",
+              "sender": "sup2",
+              "recipient": "manuf1",
+              "qty": 0
+            },
+            {
+              "in": "mat2_sup2",
+              "out": "mat2_manuf1",
+              "sender": "sup2",
+              "recipient": "manuf1",
+              "qty": 600
+            }
+          ]
+        }
+      }
+    }
+    # end of test'''
+
+    rootService = input["rootService"]
+    shared = input["shared"]
+
+    sub = {}
+    for sup in input["services"]:
+        #print(sup)
+        if input["services"][sup]["type"]!="composite":
+            sub.update({sup:transportMetrics(input["services"][sup], shared)})
+    sub
+
+    # inFlow
+    inFlow = sub["transp1"]["inFlow"].copy()
+    newRootInFlowDict = sub["transp1"]["inFlow"].copy()
+    newRootInFlowDict
+
+    inFlowQty = {
+    m: {
+        "qty": sum([
+            sub[s]["inFlow"][m]["qty"]
+            for s in sub
+            if sub[s]["type"] == "transport"
+            ])
+        }
+        for m in inFlow
+        }
+    inFlowQty
+
+    for m in inFlow:
+        newRootInFlowDict.update({m:{"qty": inFlowQty[m]["qty"], "item": inFlow[m]["item"]}})
+    newRootInFlowDict
+
+    # outFlow
+    outFlow = sub["transp1"]["outFlow"].copy()
+    newRootOutFlowDict = sub["transp1"]["outFlow"].copy()
+    newRootOutFlowDict
+
+    outFlowQty = {
+    m: {
+        "qty": sum([
+            sub[s]["outFlow"][m]["qty"]
+            for s in sub
+            if sub[s]["type"] == "transport"
+            ])
+        }
+        for m in outFlow
+        }
+    outFlowQty
+
+    for m in outFlow:
+        newRootOutFlowDict.update({m:{"qty": outFlowQty[m]["qty"], "item": outFlow[m]["item"]}})
+    newRootOutFlowDict
+
+    cost = sum([sub[s]["cost"] for s in sub])
+    #cost
+    constraints = dgal.all([sub[s]["constraints"] for s in sub])
+    #constraints
+
+    subServicesList = [s for s in sub]
+    subServicesList
+
+    mainService = {
+        rootService:{
+            "type": input["services"][rootService]["type"],
+            "cost": cost,
+            "constraints": constraints,
+            "inFlow": newRootInFlowDict,
+            "outFlow": newRootOutFlowDict,
+            "subServices": subServicesList
+        }
+    }
+    mainService
+
+
+    services = {}
+    services.update(mainService)
+    services.update(sub)
+    services
+
+    return {
+      "cost": cost,
+      "constraints": constraints,
+      "rootService": rootService,
+      "services": services
+      }
