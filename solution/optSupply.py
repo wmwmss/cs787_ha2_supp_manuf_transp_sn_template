@@ -56,14 +56,20 @@ def constraints(o):
         if o["services"][sup]["type"]!="composite":
             sub.update({sup: o["services"][sup]})
     sub
+    nonNegativityConstraint = dgal.all([
+        sub["sup1"]["outFlow"]["mat1_sup1"]["qty"]>=0,
+        sub["sup2"]["outFlow"]["mat1_sup2"]["qty"]>=0,
+        sub["sup1"]["outFlow"]["mat2_sup1"]["qty"]>=0,
+        sub["sup2"]["outFlow"]["mat2_sup2"]["qty"]>=0
+    ])
 
-    mat1Constraint = (value(sub["sup1"]["outFlow"]["mat1_sup1"]["qty"] + sub["sup2"]["outFlow"]["mat1_sup2"]["qty"]) >= 1000)
-    mat2Constraint = (value(sub["sup1"]["outFlow"]["mat2_sup1"]["qty"] + sub["sup2"]["outFlow"]["mat2_sup2"]["qty"]) >= 2000)
+    mat1Constraint = ((sub["sup1"]["outFlow"]["mat1_sup1"]["qty"] + sub["sup2"]["outFlow"]["mat1_sup2"]["qty"]) >= 1000)
+    mat2Constraint = ((sub["sup1"]["outFlow"]["mat2_sup1"]["qty"] + sub["sup2"]["outFlow"]["mat2_sup2"]["qty"]) >= 2000)
 
 
-    additional = (mat1Constraint and mat2Constraint)
-    additional
-    o["constraints"]
+    additional = dgal.all([mat1Constraint, mat2Constraint, nonNegativityConstraint])
+    #additional
+    #o["constraints"]
     return (dgal.all([ o["constraints"], additional]))
 
 optAnswer = dgal.min({

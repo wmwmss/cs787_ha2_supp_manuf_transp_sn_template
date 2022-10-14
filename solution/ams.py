@@ -727,18 +727,22 @@ def combinedManuf(input):
         ])
     flowConstraints
 
+    # quantifyConstraints = dgal.all([
+    #     sub[s]["outFlow"][k] == sub[s1]["inFlow"][k]
+    #     for s in sub
+    #     for s1 in sub
+    #     for k in sub[s]["outFlow"]
+    #     if sub[s]["type"] == "manufacturer" and sub[s1]["type"] == "manufacturer"
+    #     and s == "tier1manuf" and s1 == "tier2manuf"
+    #     ])
     quantifyConstraints = dgal.all([
-        sub[s]["outFlow"][k] == sub[s1]["inFlow"][k]
-        for s in sub
-        for s1 in sub
-        for k in sub[s]["outFlow"]
-        if sub[s]["type"] == "manufacturer" and sub[s1]["type"] == "manufacturer"
-        and s == "tier1manuf" and s1 == "tier2manuf"
-        ])
+        sub["tier1manuf"]["outFlow"]["part1_manuf12"]["qty"]==sub["tier2manuf"]["inFlow"]["part1_manuf12"]["qty"],
+        sub["tier1manuf"]["outFlow"]["part2_manuf12"]["qty"]==sub["tier2manuf"]["inFlow"]["part2_manuf12"]["qty"]
+    ])
     quantifyConstraints
 
     subConstraints = dgal.all([sub[s]["constraints"] for s in sub])
-    constraints = (flowConstraints and quantifyConstraints and subConstraints)
+    constraints = dgal.all([flowConstraints, quantifyConstraints, subConstraints])
     constraints
 
     subServicesList = [s for s in sub]

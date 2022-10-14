@@ -4,10 +4,1007 @@ NEW RUN
 
 
 DEBUG: enumInput in py:
-{'shared': {'busEntities': {'sup1': {'loc': 'Fairfax'}, 'sup2': {'loc': 'LA'}, 'transp1': {'loc': 'Seattle'}, 'transp2': {'loc': 'Baltimore'}, 'manuf1': {'loc': 'NYC'}, 'manuf2': {'loc': 'NYC'}}, 'items': {'mat1': {'weight': 1}, 'mat2': {'weight': 2}, 'part1': {'weight': 7}, 'part2': {'weight': 6}, 'prod1': {'weight': 8}, 'prod2': {'weight': 9}}}, 'rootService': 'combinedSupply', 'services': {'combinedSupply': {'type': 'composite', 'inFlow': {}, 'outFlow': {'mat1_sup1': {'lb': 0, 'item': 'mat1'}, 'mat2_sup1': {'lb': 0, 'item': 'mat2'}, 'mat1_sup2': {'lb': 0, 'item': 'mat1'}, 'mat2_sup2': {'lb': 0, 'item': 'mat2'}}, 'subServices': ['sup1', 'sup2']}, 'sup1': {'type': 'supplier', 'inFlow': {}, 'outFlow': {'mat1_sup1': {'qty': {'dgalType': 'int?', 'index': 0}, 'lb': 0, 'ppu': 5, 'item': 'mat1'}, 'mat2_sup1': {'qty': {'dgalType': 'int?', 'index': 1}, 'lb': 0, 'ppu': 4, 'item': 'mat2'}}}, 'sup2': {'type': 'supplier', 'inFlow': {}, 'outFlow': {'mat1_sup2': {'qty': {'dgalType': 'int?', 'index': 2}, 'lb': 0, 'ppu': 2, 'item': 'mat1'}, 'mat2_sup2': {'qty': {'dgalType': 'int?', 'index': 3}, 'lb': 0, 'ppu': 3, 'item': 'mat2'}}}}}
+{'shared': {'busEntities': {'sup1': {'loc': 'Fairfax'}, 'sup2': {'loc': 'LA'}, 'transp1': {'loc': 'Seattle'}, 'transp2': {'loc': 'Baltimore'}, 'manuf1': {'loc': 'NYC'}, 'manuf2': {'loc': 'NYC'}}, 'items': {'mat1': {'weight': 1}, 'mat2': {'weight': 2}, 'part1': {'weight': 7}, 'part2': {'weight': 6}, 'prod1': {'weight': 8}, 'prod2': {'weight': 9}}}, 'rootService': 'combinedTransport', 'services': {'combinedTransport': {'type': 'composite', 'inFlow': {'mat1_sup1': {'lb': 0, 'item': 'mat1'}, 'mat2_sup1': {'lb': 0, 'item': 'mat2'}, 'mat1_sup2': {'lb': 0, 'item': 'mat1'}, 'mat2_sup2': {'lb': 0, 'item': 'mat2'}}, 'outFlow': {'mat1_manuf1': {'lb': 0, 'item': 'mat1'}, 'mat2_manuf1': {'lb': 0, 'item': 'mat2'}}, 'subServices': ['transp1', 'transp2']}, 'transp1': {'type': 'transport', 'inFlow': {'mat1_sup1': {'lb': 0, 'item': 'mat1'}, 'mat2_sup1': {'lb': 0, 'item': 'mat2'}, 'mat1_sup2': {'lb': 0, 'item': 'mat1'}, 'mat2_sup2': {'lb': 0, 'item': 'mat2'}}, 'outFlow': {'mat1_manuf1': {'lb': 0, 'item': 'mat1'}, 'mat2_manuf1': {'lb': 0, 'item': 'mat2'}}, 'pplbFromTo': {'Fairfax': {'NYC': 0.5}, 'LA': {'NYC': 2.5}}, 'orders': [{'in': 'mat1_sup1', 'out': 'mat1_manuf1', 'sender': 'sup1', 'recipient': 'manuf1', 'qty': {'dgalType': 'int?', 'index': 0}}, {'in': 'mat2_sup1', 'out': 'mat2_manuf1', 'sender': 'sup1', 'recipient': 'manuf1', 'qty': {'dgalType': 'int?', 'index': 1}}, {'in': 'mat1_sup2', 'out': 'mat1_manuf1', 'sender': 'sup2', 'recipient': 'manuf1', 'qty': {'dgalType': 'int?', 'index': 2}}, {'in': 'mat2_sup2', 'out': 'mat2_manuf1', 'sender': 'sup2', 'recipient': 'manuf1', 'qty': {'dgalType': 'int?', 'index': 3}}]}, 'transp2': {'type': 'transport', 'inFlow': {'mat1_sup1': {'lb': 0, 'item': 'mat1'}, 'mat2_sup1': {'lb': 0, 'item': 'mat2'}, 'mat1_sup2': {'lb': 0, 'item': 'mat1'}, 'mat2_sup2': {'lb': 0, 'item': 'mat2'}}, 'outFlow': {'mat1_manuf1': {'lb': 0, 'item': 'mat1'}, 'mat2_manuf1': {'lb': 0, 'item': 'mat2'}}, 'pplbFromTo': {'Fairfax': {'NYC': 0.1}, 'LA': {'NYC': 2.0}}, 'orders': [{'in': 'mat1_sup1', 'out': 'mat1_manuf1', 'sender': 'sup1', 'recipient': 'manuf1', 'qty': {'dgalType': 'int?', 'index': 4}}, {'in': 'mat2_sup1', 'out': 'mat2_manuf1', 'sender': 'sup1', 'recipient': 'manuf1', 'qty': {'dgalType': 'int?', 'index': 5}}, {'in': 'mat1_sup2', 'out': 'mat1_manuf1', 'sender': 'sup2', 'recipient': 'manuf1', 'qty': {'dgalType': 'int?', 'index': 6}}, {'in': 'mat2_sup2', 'out': 'mat2_manuf1', 'sender': 'sup2', 'recipient': 'manuf1', 'qty': {'dgalType': 'int?', 'index': 7}}]}}}
 
 DEBUG: enumInputAndCounts_before_create_Pyomo_model:
-{'enumInput': {'shared': {'busEntities': {'sup1': {'loc': 'Fairfax'}, 'sup2': {'loc': 'LA'}, 'transp1': {'loc': 'Seattle'}, 'transp2': {'loc': 'Baltimore'}, 'manuf1': {'loc': 'NYC'}, 'manuf2': {'loc': 'NYC'}}, 'items': {'mat1': {'weight': 1}, 'mat2': {'weight': 2}, 'part1': {'weight': 7}, 'part2': {'weight': 6}, 'prod1': {'weight': 8}, 'prod2': {'weight': 9}}}, 'rootService': 'combinedSupply', 'services': {'combinedSupply': {'type': 'composite', 'inFlow': {}, 'outFlow': {'mat1_sup1': {'lb': 0, 'item': 'mat1'}, 'mat2_sup1': {'lb': 0, 'item': 'mat2'}, 'mat1_sup2': {'lb': 0, 'item': 'mat1'}, 'mat2_sup2': {'lb': 0, 'item': 'mat2'}}, 'subServices': ['sup1', 'sup2']}, 'sup1': {'type': 'supplier', 'inFlow': {}, 'outFlow': {'mat1_sup1': {'qty': {'dgalType': 'int?', 'index': 0}, 'lb': 0, 'ppu': 5, 'item': 'mat1'}, 'mat2_sup1': {'qty': {'dgalType': 'int?', 'index': 1}, 'lb': 0, 'ppu': 4, 'item': 'mat2'}}}, 'sup2': {'type': 'supplier', 'inFlow': {}, 'outFlow': {'mat1_sup2': {'qty': {'dgalType': 'int?', 'index': 2}, 'lb': 0, 'ppu': 2, 'item': 'mat1'}, 'mat2_sup2': {'qty': {'dgalType': 'int?', 'index': 3}, 'lb': 0, 'ppu': 3, 'item': 'mat2'}}}}}, 'counts': {'real?': -1, 'int?': 3}}
+{'enumInput': {'shared': {'busEntities': {'sup1': {'loc': 'Fairfax'}, 'sup2': {'loc': 'LA'}, 'transp1': {'loc': 'Seattle'}, 'transp2': {'loc': 'Baltimore'}, 'manuf1': {'loc': 'NYC'}, 'manuf2': {'loc': 'NYC'}}, 'items': {'mat1': {'weight': 1}, 'mat2': {'weight': 2}, 'part1': {'weight': 7}, 'part2': {'weight': 6}, 'prod1': {'weight': 8}, 'prod2': {'weight': 9}}}, 'rootService': 'combinedTransport', 'services': {'combinedTransport': {'type': 'composite', 'inFlow': {'mat1_sup1': {'lb': 0, 'item': 'mat1'}, 'mat2_sup1': {'lb': 0, 'item': 'mat2'}, 'mat1_sup2': {'lb': 0, 'item': 'mat1'}, 'mat2_sup2': {'lb': 0, 'item': 'mat2'}}, 'outFlow': {'mat1_manuf1': {'lb': 0, 'item': 'mat1'}, 'mat2_manuf1': {'lb': 0, 'item': 'mat2'}}, 'subServices': ['transp1', 'transp2']}, 'transp1': {'type': 'transport', 'inFlow': {'mat1_sup1': {'lb': 0, 'item': 'mat1'}, 'mat2_sup1': {'lb': 0, 'item': 'mat2'}, 'mat1_sup2': {'lb': 0, 'item': 'mat1'}, 'mat2_sup2': {'lb': 0, 'item': 'mat2'}}, 'outFlow': {'mat1_manuf1': {'lb': 0, 'item': 'mat1'}, 'mat2_manuf1': {'lb': 0, 'item': 'mat2'}}, 'pplbFromTo': {'Fairfax': {'NYC': 0.5}, 'LA': {'NYC': 2.5}}, 'orders': [{'in': 'mat1_sup1', 'out': 'mat1_manuf1', 'sender': 'sup1', 'recipient': 'manuf1', 'qty': {'dgalType': 'int?', 'index': 0}}, {'in': 'mat2_sup1', 'out': 'mat2_manuf1', 'sender': 'sup1', 'recipient': 'manuf1', 'qty': {'dgalType': 'int?', 'index': 1}}, {'in': 'mat1_sup2', 'out': 'mat1_manuf1', 'sender': 'sup2', 'recipient': 'manuf1', 'qty': {'dgalType': 'int?', 'index': 2}}, {'in': 'mat2_sup2', 'out': 'mat2_manuf1', 'sender': 'sup2', 'recipient': 'manuf1', 'qty': {'dgalType': 'int?', 'index': 3}}]}, 'transp2': {'type': 'transport', 'inFlow': {'mat1_sup1': {'lb': 0, 'item': 'mat1'}, 'mat2_sup1': {'lb': 0, 'item': 'mat2'}, 'mat1_sup2': {'lb': 0, 'item': 'mat1'}, 'mat2_sup2': {'lb': 0, 'item': 'mat2'}}, 'outFlow': {'mat1_manuf1': {'lb': 0, 'item': 'mat1'}, 'mat2_manuf1': {'lb': 0, 'item': 'mat2'}}, 'pplbFromTo': {'Fairfax': {'NYC': 0.1}, 'LA': {'NYC': 2.0}}, 'orders': [{'in': 'mat1_sup1', 'out': 'mat1_manuf1', 'sender': 'sup1', 'recipient': 'manuf1', 'qty': {'dgalType': 'int?', 'index': 4}}, {'in': 'mat2_sup1', 'out': 'mat2_manuf1', 'sender': 'sup1', 'recipient': 'manuf1', 'qty': {'dgalType': 'int?', 'index': 5}}, {'in': 'mat1_sup2', 'out': 'mat1_manuf1', 'sender': 'sup2', 'recipient': 'manuf1', 'qty': {'dgalType': 'int?', 'index': 6}}, {'in': 'mat2_sup2', 'out': 'mat2_manuf1', 'sender': 'sup2', 'recipient': 'manuf1', 'qty': {'dgalType': 'int?', 'index': 7}}]}}}, 'counts': {'real?': -1, 'int?': 7}}
 
 DEBUG: input w Pyomo vars:
-{'shared': {'busEntities': {'sup1': {'loc': 'Fairfax'}, 'sup2': {'loc': 'LA'}, 'transp1': {'loc': 'Seattle'}, 'transp2': {'loc': 'Baltimore'}, 'manuf1': {'loc': 'NYC'}, 'manuf2': {'loc': 'NYC'}}, 'items': {'mat1': {'weight': 1}, 'mat2': {'weight': 2}, 'part1': {'weight': 7}, 'part2': {'weight': 6}, 'prod1': {'weight': 8}, 'prod2': {'weight': 9}}}, 'rootService': 'combinedSupply', 'services': {'combinedSupply': {'type': 'composite', 'inFlow': {}, 'outFlow': {'mat1_sup1': {'lb': 0, 'item': 'mat1'}, 'mat2_sup1': {'lb': 0, 'item': 'mat2'}, 'mat1_sup2': {'lb': 0, 'item': 'mat1'}, 'mat2_sup2': {'lb': 0, 'item': 'mat2'}}, 'subServices': ['sup1', 'sup2']}, 'sup1': {'type': 'supplier', 'inFlow': {}, 'outFlow': {'mat1_sup1': {'qty': <pyomo.core.base.var._GeneralVarData object at 0x115b28e20>, 'lb': 0, 'ppu': 5, 'item': 'mat1'}, 'mat2_sup1': {'qty': <pyomo.core.base.var._GeneralVarData object at 0x115b28f40>, 'lb': 0, 'ppu': 4, 'item': 'mat2'}}}, 'sup2': {'type': 'supplier', 'inFlow': {}, 'outFlow': {'mat1_sup2': {'qty': <pyomo.core.base.var._GeneralVarData object at 0x115b28880>, 'lb': 0, 'ppu': 2, 'item': 'mat1'}, 'mat2_sup2': {'qty': <pyomo.core.base.var._GeneralVarData object at 0x115b28b80>, 'lb': 0, 'ppu': 3, 'item': 'mat2'}}}}}
+{'shared': {'busEntities': {'sup1': {'loc': 'Fairfax'}, 'sup2': {'loc': 'LA'}, 'transp1': {'loc': 'Seattle'}, 'transp2': {'loc': 'Baltimore'}, 'manuf1': {'loc': 'NYC'}, 'manuf2': {'loc': 'NYC'}}, 'items': {'mat1': {'weight': 1}, 'mat2': {'weight': 2}, 'part1': {'weight': 7}, 'part2': {'weight': 6}, 'prod1': {'weight': 8}, 'prod2': {'weight': 9}}}, 'rootService': 'combinedTransport', 'services': {'combinedTransport': {'type': 'composite', 'inFlow': {'mat1_sup1': {'lb': 0, 'item': 'mat1'}, 'mat2_sup1': {'lb': 0, 'item': 'mat2'}, 'mat1_sup2': {'lb': 0, 'item': 'mat1'}, 'mat2_sup2': {'lb': 0, 'item': 'mat2'}}, 'outFlow': {'mat1_manuf1': {'lb': 0, 'item': 'mat1'}, 'mat2_manuf1': {'lb': 0, 'item': 'mat2'}}, 'subServices': ['transp1', 'transp2']}, 'transp1': {'type': 'transport', 'inFlow': {'mat1_sup1': {'lb': 0, 'item': 'mat1'}, 'mat2_sup1': {'lb': 0, 'item': 'mat2'}, 'mat1_sup2': {'lb': 0, 'item': 'mat1'}, 'mat2_sup2': {'lb': 0, 'item': 'mat2'}}, 'outFlow': {'mat1_manuf1': {'lb': 0, 'item': 'mat1'}, 'mat2_manuf1': {'lb': 0, 'item': 'mat2'}}, 'pplbFromTo': {'Fairfax': {'NYC': 0.5}, 'LA': {'NYC': 2.5}}, 'orders': [{'in': 'mat1_sup1', 'out': 'mat1_manuf1', 'sender': 'sup1', 'recipient': 'manuf1', 'qty': <pyomo.core.base.var._GeneralVarData object at 0x7f9d40f899a0>}, {'in': 'mat2_sup1', 'out': 'mat2_manuf1', 'sender': 'sup1', 'recipient': 'manuf1', 'qty': <pyomo.core.base.var._GeneralVarData object at 0x7f9d40f89a00>}, {'in': 'mat1_sup2', 'out': 'mat1_manuf1', 'sender': 'sup2', 'recipient': 'manuf1', 'qty': <pyomo.core.base.var._GeneralVarData object at 0x7f9d40f89a60>}, {'in': 'mat2_sup2', 'out': 'mat2_manuf1', 'sender': 'sup2', 'recipient': 'manuf1', 'qty': <pyomo.core.base.var._GeneralVarData object at 0x7f9d40f89ac0>}]}, 'transp2': {'type': 'transport', 'inFlow': {'mat1_sup1': {'lb': 0, 'item': 'mat1'}, 'mat2_sup1': {'lb': 0, 'item': 'mat2'}, 'mat1_sup2': {'lb': 0, 'item': 'mat1'}, 'mat2_sup2': {'lb': 0, 'item': 'mat2'}}, 'outFlow': {'mat1_manuf1': {'lb': 0, 'item': 'mat1'}, 'mat2_manuf1': {'lb': 0, 'item': 'mat2'}}, 'pplbFromTo': {'Fairfax': {'NYC': 0.1}, 'LA': {'NYC': 2.0}}, 'orders': [{'in': 'mat1_sup1', 'out': 'mat1_manuf1', 'sender': 'sup1', 'recipient': 'manuf1', 'qty': <pyomo.core.base.var._GeneralVarData object at 0x7f9d40f89b20>}, {'in': 'mat2_sup1', 'out': 'mat2_manuf1', 'sender': 'sup1', 'recipient': 'manuf1', 'qty': <pyomo.core.base.var._GeneralVarData object at 0x7f9d40f89b80>}, {'in': 'mat1_sup2', 'out': 'mat1_manuf1', 'sender': 'sup2', 'recipient': 'manuf1', 'qty': <pyomo.core.base.var._GeneralVarData object at 0x7f9d40f89be0>}, {'in': 'mat2_sup2', 'out': 'mat2_manuf1', 'sender': 'sup2', 'recipient': 'manuf1', 'qty': <pyomo.core.base.var._GeneralVarData object at 0x7f9d40f89c40>}]}}}
+
+DEBUG: output of dgalModel:
+{'cost': <pyomo.core.expr.numeric_expr.SumExpression object at 0x7f9d40fb9800>, 'constraints': [<pyomo.core.expr.logical_expr.InequalityExpression object at 0x7f9d40f982b0>, <pyomo.core.expr.logical_expr.InequalityExpression object at 0x7f9d40f982e0>, <pyomo.core.expr.logical_expr.InequalityExpression object at 0x7f9d40f98310>, <pyomo.core.expr.logical_expr.InequalityExpression object at 0x7f9d40f98340>, <pyomo.core.expr.logical_expr.InequalityExpression object at 0x7f9d40f98370>, <pyomo.core.expr.logical_expr.InequalityExpression object at 0x7f9d40f983a0>, <pyomo.core.expr.logical_expr.InequalityExpression object at 0x7f9d40f983d0>, <pyomo.core.expr.logical_expr.InequalityExpression object at 0x7f9d40f98400>, <pyomo.core.expr.logical_expr.InequalityExpression object at 0x7f9d40f98430>, <pyomo.core.expr.logical_expr.InequalityExpression object at 0x7f9d40f98460>, <pyomo.core.expr.logical_expr.InequalityExpression object at 0x7f9d40f98490>, <pyomo.core.expr.logical_expr.InequalityExpression object at 0x7f9d40f984c0>, <pyomo.core.expr.logical_expr.InequalityExpression object at 0x7f9d40f985b0>, <pyomo.core.expr.logical_expr.InequalityExpression object at 0x7f9d40f985e0>, <pyomo.core.expr.logical_expr.InequalityExpression object at 0x7f9d40f98610>, <pyomo.core.expr.logical_expr.InequalityExpression object at 0x7f9d40f98640>, <pyomo.core.expr.logical_expr.InequalityExpression object at 0x7f9d40f98670>, <pyomo.core.expr.logical_expr.InequalityExpression object at 0x7f9d40f986a0>, <pyomo.core.expr.logical_expr.InequalityExpression object at 0x7f9d40f986d0>, <pyomo.core.expr.logical_expr.InequalityExpression object at 0x7f9d40f98700>, <pyomo.core.expr.logical_expr.InequalityExpression object at 0x7f9d40f98730>, <pyomo.core.expr.logical_expr.InequalityExpression object at 0x7f9d40f98760>, <pyomo.core.expr.logical_expr.InequalityExpression object at 0x7f9d40f98790>, <pyomo.core.expr.logical_expr.InequalityExpression object at 0x7f9d40f987c0>], 'rootService': 'combinedTransport', 'services': {'combinedTransport': {'type': 'composite', 'cost': <pyomo.core.expr.numeric_expr.SumExpression object at 0x7f9d40fb9800>, 'constraints': [<pyomo.core.expr.logical_expr.InequalityExpression object at 0x7f9d40f982b0>, <pyomo.core.expr.logical_expr.InequalityExpression object at 0x7f9d40f982e0>, <pyomo.core.expr.logical_expr.InequalityExpression object at 0x7f9d40f98310>, <pyomo.core.expr.logical_expr.InequalityExpression object at 0x7f9d40f98340>, <pyomo.core.expr.logical_expr.InequalityExpression object at 0x7f9d40f98370>, <pyomo.core.expr.logical_expr.InequalityExpression object at 0x7f9d40f983a0>, <pyomo.core.expr.logical_expr.InequalityExpression object at 0x7f9d40f983d0>, <pyomo.core.expr.logical_expr.InequalityExpression object at 0x7f9d40f98400>, <pyomo.core.expr.logical_expr.InequalityExpression object at 0x7f9d40f98430>, <pyomo.core.expr.logical_expr.InequalityExpression object at 0x7f9d40f98460>, <pyomo.core.expr.logical_expr.InequalityExpression object at 0x7f9d40f98490>, <pyomo.core.expr.logical_expr.InequalityExpression object at 0x7f9d40f984c0>, <pyomo.core.expr.logical_expr.InequalityExpression object at 0x7f9d40f985b0>, <pyomo.core.expr.logical_expr.InequalityExpression object at 0x7f9d40f985e0>, <pyomo.core.expr.logical_expr.InequalityExpression object at 0x7f9d40f98610>, <pyomo.core.expr.logical_expr.InequalityExpression object at 0x7f9d40f98640>, <pyomo.core.expr.logical_expr.InequalityExpression object at 0x7f9d40f98670>, <pyomo.core.expr.logical_expr.InequalityExpression object at 0x7f9d40f986a0>, <pyomo.core.expr.logical_expr.InequalityExpression object at 0x7f9d40f986d0>, <pyomo.core.expr.logical_expr.InequalityExpression object at 0x7f9d40f98700>, <pyomo.core.expr.logical_expr.InequalityExpression object at 0x7f9d40f98730>, <pyomo.core.expr.logical_expr.InequalityExpression object at 0x7f9d40f98760>, <pyomo.core.expr.logical_expr.InequalityExpression object at 0x7f9d40f98790>, <pyomo.core.expr.logical_expr.InequalityExpression object at 0x7f9d40f987c0>], 'inFlow': {'mat1_sup1': {'qty': <pyomo.core.expr.numeric_expr.SumExpression object at 0x7f9d40fb9080>, 'item': 'mat1'}, 'mat2_sup1': {'qty': <pyomo.core.expr.numeric_expr.SumExpression object at 0x7f9d40fb9180>, 'item': 'mat2'}, 'mat1_sup2': {'qty': <pyomo.core.expr.numeric_expr.SumExpression object at 0x7f9d40fb9300>, 'item': 'mat1'}, 'mat2_sup2': {'qty': <pyomo.core.expr.numeric_expr.SumExpression object at 0x7f9d40fb9380>, 'item': 'mat2'}}, 'outFlow': {'mat1_manuf1': {'qty': <pyomo.core.expr.numeric_expr.SumExpression object at 0x7f9d40fb95c0>, 'item': 'mat1'}, 'mat2_manuf1': {'qty': <pyomo.core.expr.numeric_expr.SumExpression object at 0x7f9d40fb9680>, 'item': 'mat2'}}, 'subServices': ['transp1', 'transp2']}, 'transp1': {'type': 'transport', 'cost': <pyomo.core.expr.numeric_expr.SumExpression object at 0x7f9d40fb3800>, 'constraints': [<pyomo.core.expr.logical_expr.InequalityExpression object at 0x7f9d40f982b0>, <pyomo.core.expr.logical_expr.InequalityExpression object at 0x7f9d40f982e0>, <pyomo.core.expr.logical_expr.InequalityExpression object at 0x7f9d40f98310>, <pyomo.core.expr.logical_expr.InequalityExpression object at 0x7f9d40f98340>, <pyomo.core.expr.logical_expr.InequalityExpression object at 0x7f9d40f98370>, <pyomo.core.expr.logical_expr.InequalityExpression object at 0x7f9d40f983a0>, <pyomo.core.expr.logical_expr.InequalityExpression object at 0x7f9d40f983d0>, <pyomo.core.expr.logical_expr.InequalityExpression object at 0x7f9d40f98400>, <pyomo.core.expr.logical_expr.InequalityExpression object at 0x7f9d40f98430>, <pyomo.core.expr.logical_expr.InequalityExpression object at 0x7f9d40f98460>, <pyomo.core.expr.logical_expr.InequalityExpression object at 0x7f9d40f98490>, <pyomo.core.expr.logical_expr.InequalityExpression object at 0x7f9d40f984c0>], 'inFlow': {'mat1_sup1': {'qty': <pyomo.core.base.var._GeneralVarData object at 0x7f9d40f899a0>, 'item': 'mat1'}, 'mat2_sup1': {'qty': <pyomo.core.base.var._GeneralVarData object at 0x7f9d40f89a00>, 'item': 'mat2'}, 'mat1_sup2': {'qty': <pyomo.core.base.var._GeneralVarData object at 0x7f9d40f89a60>, 'item': 'mat1'}, 'mat2_sup2': {'qty': <pyomo.core.base.var._GeneralVarData object at 0x7f9d40f89ac0>, 'item': 'mat2'}}, 'outFlow': {'mat1_manuf1': {'qty': <pyomo.core.expr.numeric_expr.SumExpression object at 0x7f9d40fb3540>, 'item': 'mat1'}, 'mat2_manuf1': {'qty': <pyomo.core.expr.numeric_expr.SumExpression object at 0x7f9d40fb3700>, 'item': 'mat2'}}}, 'transp2': {'type': 'transport', 'cost': <pyomo.core.expr.numeric_expr.SumExpression object at 0x7f9d40fb3d00>, 'constraints': [<pyomo.core.expr.logical_expr.InequalityExpression object at 0x7f9d40f985b0>, <pyomo.core.expr.logical_expr.InequalityExpression object at 0x7f9d40f985e0>, <pyomo.core.expr.logical_expr.InequalityExpression object at 0x7f9d40f98610>, <pyomo.core.expr.logical_expr.InequalityExpression object at 0x7f9d40f98640>, <pyomo.core.expr.logical_expr.InequalityExpression object at 0x7f9d40f98670>, <pyomo.core.expr.logical_expr.InequalityExpression object at 0x7f9d40f986a0>, <pyomo.core.expr.logical_expr.InequalityExpression object at 0x7f9d40f986d0>, <pyomo.core.expr.logical_expr.InequalityExpression object at 0x7f9d40f98700>, <pyomo.core.expr.logical_expr.InequalityExpression object at 0x7f9d40f98730>, <pyomo.core.expr.logical_expr.InequalityExpression object at 0x7f9d40f98760>, <pyomo.core.expr.logical_expr.InequalityExpression object at 0x7f9d40f98790>, <pyomo.core.expr.logical_expr.InequalityExpression object at 0x7f9d40f987c0>], 'inFlow': {'mat1_sup1': {'qty': <pyomo.core.base.var._GeneralVarData object at 0x7f9d40f89b20>, 'item': 'mat1'}, 'mat2_sup1': {'qty': <pyomo.core.base.var._GeneralVarData object at 0x7f9d40f89b80>, 'item': 'mat2'}, 'mat1_sup2': {'qty': <pyomo.core.base.var._GeneralVarData object at 0x7f9d40f89be0>, 'item': 'mat1'}, 'mat2_sup2': {'qty': <pyomo.core.base.var._GeneralVarData object at 0x7f9d40f89c40>, 'item': 'mat2'}}, 'outFlow': {'mat1_manuf1': {'qty': <pyomo.core.expr.numeric_expr.SumExpression object at 0x7f9d40fb3a40>, 'item': 'mat1'}, 'mat2_manuf1': {'qty': <pyomo.core.expr.numeric_expr.SumExpression object at 0x7f9d40fb3ac0>, 'item': 'mat2'}}}}}
+
+DEBUG: pyomoModel before return:
+unknown
+
+DEBUG: enumInput before solving:
+{"shared": {"busEntities": {"sup1": {"loc": "Fairfax"}, "sup2": {"loc": "LA"}, "transp1": {"loc": "Seattle"}, "transp2": {"loc": "Baltimore"}, "manuf1": {"loc": "NYC"}, "manuf2": {"loc": "NYC"}}, "items": {"mat1": {"weight": 1}, "mat2": {"weight": 2}, "part1": {"weight": 7}, "part2": {"weight": 6}, "prod1": {"weight": 8}, "prod2": {"weight": 9}}}, "rootService": "combinedTransport", "services": {"combinedTransport": {"type": "composite", "inFlow": {"mat1_sup1": {"lb": 0, "item": "mat1"}, "mat2_sup1": {"lb": 0, "item": "mat2"}, "mat1_sup2": {"lb": 0, "item": "mat1"}, "mat2_sup2": {"lb": 0, "item": "mat2"}}, "outFlow": {"mat1_manuf1": {"lb": 0, "item": "mat1"}, "mat2_manuf1": {"lb": 0, "item": "mat2"}}, "subServices": ["transp1", "transp2"]}, "transp1": {"type": "transport", "inFlow": {"mat1_sup1": {"lb": 0, "item": "mat1"}, "mat2_sup1": {"lb": 0, "item": "mat2"}, "mat1_sup2": {"lb": 0, "item": "mat1"}, "mat2_sup2": {"lb": 0, "item": "mat2"}}, "outFlow": {"mat1_manuf1": {"lb": 0, "item": "mat1"}, "mat2_manuf1": {"lb": 0, "item": "mat2"}}, "pplbFromTo": {"Fairfax": {"NYC": 0.5}, "LA": {"NYC": 2.5}}, "orders": [{"in": "mat1_sup1", "out": "mat1_manuf1", "sender": "sup1", "recipient": "manuf1", "qty": {"dgalType": "int?", "index": 0}}, {"in": "mat2_sup1", "out": "mat2_manuf1", "sender": "sup1", "recipient": "manuf1", "qty": {"dgalType": "int?", "index": 1}}, {"in": "mat1_sup2", "out": "mat1_manuf1", "sender": "sup2", "recipient": "manuf1", "qty": {"dgalType": "int?", "index": 2}}, {"in": "mat2_sup2", "out": "mat2_manuf1", "sender": "sup2", "recipient": "manuf1", "qty": {"dgalType": "int?", "index": 3}}]}, "transp2": {"type": "transport", "inFlow": {"mat1_sup1": {"lb": 0, "item": "mat1"}, "mat2_sup1": {"lb": 0, "item": "mat2"}, "mat1_sup2": {"lb": 0, "item": "mat1"}, "mat2_sup2": {"lb": 0, "item": "mat2"}}, "outFlow": {"mat1_manuf1": {"lb": 0, "item": "mat1"}, "mat2_manuf1": {"lb": 0, "item": "mat2"}}, "pplbFromTo": {"Fairfax": {"NYC": 0.1}, "LA": {"NYC": 2.0}}, "orders": [{"in": "mat1_sup1", "out": "mat1_manuf1", "sender": "sup1", "recipient": "manuf1", "qty": {"dgalType": "int?", "index": 4}}, {"in": "mat2_sup1", "out": "mat2_manuf1", "sender": "sup1", "recipient": "manuf1", "qty": {"dgalType": "int?", "index": 5}}, {"in": "mat1_sup2", "out": "mat1_manuf1", "sender": "sup2", "recipient": "manuf1", "qty": {"dgalType": "int?", "index": 6}}, {"in": "mat2_sup2", "out": "mat2_manuf1", "sender": "sup2", "recipient": "manuf1", "qty": {"dgalType": "int?", "index": 7}}]}}}
+
+DEBUG: solver::
+glpk
+
+DEBUG: model after solve::
+unknown
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+shared
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+busEntities
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+sup1
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+loc
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+sup2
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+loc
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+transp1
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+loc
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+transp2
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+loc
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+manuf1
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+loc
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+manuf2
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+loc
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+items
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+mat1
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+weight
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+mat2
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+weight
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+part1
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+weight
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+part2
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+weight
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+prod1
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+weight
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+prod2
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+weight
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+rootService
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+services
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+combinedTransport
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+type
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+inFlow
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+mat1_sup1
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+lb
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+item
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+mat2_sup1
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+lb
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+item
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+mat1_sup2
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+lb
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+item
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+mat2_sup2
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+lb
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+item
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+outFlow
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+mat1_manuf1
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+lb
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+item
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+mat2_manuf1
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+lb
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+item
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+subServices
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+transp1
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+type
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+inFlow
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+mat1_sup1
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+lb
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+item
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+mat2_sup1
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+lb
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+item
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+mat1_sup2
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+lb
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+item
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+mat2_sup2
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+lb
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+item
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+outFlow
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+mat1_manuf1
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+lb
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+item
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+mat2_manuf1
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+lb
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+item
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+pplbFromTo
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+Fairfax
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+NYC
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+LA
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+NYC
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+orders
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+in
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+out
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+sender
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+recipient
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+qty
+
+DEBUG: dgType_in_dgalOptResult:
+int?
+
+DEBUG: passed real? or int? test in dgalOptResult:
+int?
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+in
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+out
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+sender
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+recipient
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+qty
+
+DEBUG: dgType_in_dgalOptResult:
+int?
+
+DEBUG: passed real? or int? test in dgalOptResult:
+int?
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+in
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+out
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+sender
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+recipient
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+qty
+
+DEBUG: dgType_in_dgalOptResult:
+int?
+
+DEBUG: passed real? or int? test in dgalOptResult:
+int?
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+in
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+out
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+sender
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+recipient
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+qty
+
+DEBUG: dgType_in_dgalOptResult:
+int?
+
+DEBUG: passed real? or int? test in dgalOptResult:
+int?
+
+DEBUG: key in enumInput::
+transp2
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+type
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+inFlow
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+mat1_sup1
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+lb
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+item
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+mat2_sup1
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+lb
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+item
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+mat1_sup2
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+lb
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+item
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+mat2_sup2
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+lb
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+item
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+outFlow
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+mat1_manuf1
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+lb
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+item
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+mat2_manuf1
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+lb
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+item
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+pplbFromTo
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+Fairfax
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+NYC
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+LA
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+NYC
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+orders
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+in
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+out
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+sender
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+recipient
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+qty
+
+DEBUG: dgType_in_dgalOptResult:
+int?
+
+DEBUG: passed real? or int? test in dgalOptResult:
+int?
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+in
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+out
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+sender
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+recipient
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+qty
+
+DEBUG: dgType_in_dgalOptResult:
+int?
+
+DEBUG: passed real? or int? test in dgalOptResult:
+int?
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+in
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+out
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+sender
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+recipient
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+qty
+
+DEBUG: dgType_in_dgalOptResult:
+int?
+
+DEBUG: passed real? or int? test in dgalOptResult:
+int?
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+in
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+out
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+sender
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+recipient
+
+DEBUG: dgType_in_dgalOptResult:
+none
+
+DEBUG: key in enumInput::
+qty
+
+DEBUG: dgType_in_dgalOptResult:
+int?
+
+DEBUG: passed real? or int? test in dgalOptResult:
+int?
+
+DEBUG: optAnswer before dgalOptResult return:
+{'shared': {'busEntities': {'sup1': {'loc': 'Fairfax'}, 'sup2': {'loc': 'LA'}, 'transp1': {'loc': 'Seattle'}, 'transp2': {'loc': 'Baltimore'}, 'manuf1': {'loc': 'NYC'}, 'manuf2': {'loc': 'NYC'}}, 'items': {'mat1': {'weight': 1}, 'mat2': {'weight': 2}, 'part1': {'weight': 7}, 'part2': {'weight': 6}, 'prod1': {'weight': 8}, 'prod2': {'weight': 9}}}, 'rootService': 'combinedTransport', 'services': {'combinedTransport': {'type': 'composite', 'inFlow': {'mat1_sup1': {'lb': 0, 'item': 'mat1'}, 'mat2_sup1': {'lb': 0, 'item': 'mat2'}, 'mat1_sup2': {'lb': 0, 'item': 'mat1'}, 'mat2_sup2': {'lb': 0, 'item': 'mat2'}}, 'outFlow': {'mat1_manuf1': {'lb': 0, 'item': 'mat1'}, 'mat2_manuf1': {'lb': 0, 'item': 'mat2'}}, 'subServices': ['transp1', 'transp2']}, 'transp1': {'type': 'transport', 'inFlow': {'mat1_sup1': {'lb': 0, 'item': 'mat1'}, 'mat2_sup1': {'lb': 0, 'item': 'mat2'}, 'mat1_sup2': {'lb': 0, 'item': 'mat1'}, 'mat2_sup2': {'lb': 0, 'item': 'mat2'}}, 'outFlow': {'mat1_manuf1': {'lb': 0, 'item': 'mat1'}, 'mat2_manuf1': {'lb': 0, 'item': 'mat2'}}, 'pplbFromTo': {'Fairfax': {'NYC': 0.5}, 'LA': {'NYC': 2.5}}, 'orders': [{'in': 'mat1_sup1', 'out': 'mat1_manuf1', 'sender': 'sup1', 'recipient': 'manuf1', 'qty': 0.0}, {'in': 'mat2_sup1', 'out': 'mat2_manuf1', 'sender': 'sup1', 'recipient': 'manuf1', 'qty': 0.0}, {'in': 'mat1_sup2', 'out': 'mat1_manuf1', 'sender': 'sup2', 'recipient': 'manuf1', 'qty': 0.0}, {'in': 'mat2_sup2', 'out': 'mat2_manuf1', 'sender': 'sup2', 'recipient': 'manuf1', 'qty': 0.0}]}, 'transp2': {'type': 'transport', 'inFlow': {'mat1_sup1': {'lb': 0, 'item': 'mat1'}, 'mat2_sup1': {'lb': 0, 'item': 'mat2'}, 'mat1_sup2': {'lb': 0, 'item': 'mat1'}, 'mat2_sup2': {'lb': 0, 'item': 'mat2'}}, 'outFlow': {'mat1_manuf1': {'lb': 0, 'item': 'mat1'}, 'mat2_manuf1': {'lb': 0, 'item': 'mat2'}}, 'pplbFromTo': {'Fairfax': {'NYC': 0.1}, 'LA': {'NYC': 2.0}}, 'orders': [{'in': 'mat1_sup1', 'out': 'mat1_manuf1', 'sender': 'sup1', 'recipient': 'manuf1', 'qty': 1000.0}, {'in': 'mat2_sup1', 'out': 'mat2_manuf1', 'sender': 'sup1', 'recipient': 'manuf1', 'qty': 2000.0}, {'in': 'mat1_sup2', 'out': 'mat1_manuf1', 'sender': 'sup2', 'recipient': 'manuf1', 'qty': 0.0}, {'in': 'mat2_sup2', 'out': 'mat2_manuf1', 'sender': 'sup2', 'recipient': 'manuf1', 'qty': 0.0}]}}}
+
+DEBUG: pyomo results::
+
+Problem: 
+- Name: unknown
+  Lower bound: 500.0
+  Upper bound: 500.0
+  Number of objectives: 1
+  Number of constraints: 27
+  Number of variables: 9
+  Number of nonzeros: 41
+  Sense: minimize
+Solver: 
+- Status: ok
+  Termination condition: optimal
+  Statistics: 
+    Branch and bound: 
+      Number of bounded subproblems: 1
+      Number of created subproblems: 1
+  Error rc: 0
+  Time: 0.016543865203857422
+Solution: 
+- number of solutions: 0
+  number of solutions displayed: 0
+
+
+DEBUG: dictPyomoResult read from results file:
+{'Problem': [{'Lower bound': 500.0, 'Name': 'unknown', 'Number of constraints': 27, 'Number of nonzeros': 41, 'Number of objectives': 1, 'Number of variables': 9, 'Sense': 'minimize', 'Upper bound': 500.0}], 'Solution': [{'number of solutions': 0, 'number of solutions displayed': 0}], 'Solver': [{'Error rc': 0, 'Statistics': {'Branch and bound': {'Number of bounded subproblems': '1', 'Number of created subproblems': '1'}}, 'Status': 'ok', 'Termination condition': 'optimal', 'Time': 0.016543865203857422}]}
+
+DEBUG: optOutput:
+{'cost': 500.0, 'constraints': True, 'rootService': 'combinedTransport', 'services': {'combinedTransport': {'type': 'composite', 'cost': 500.0, 'constraints': True, 'inFlow': {'mat1_sup1': {'qty': 1000.0, 'item': 'mat1'}, 'mat2_sup1': {'qty': 2000.0, 'item': 'mat2'}, 'mat1_sup2': {'qty': 0.0, 'item': 'mat1'}, 'mat2_sup2': {'qty': 0.0, 'item': 'mat2'}}, 'outFlow': {'mat1_manuf1': {'qty': 1000.0, 'item': 'mat1'}, 'mat2_manuf1': {'qty': 2000.0, 'item': 'mat2'}}, 'subServices': ['transp1', 'transp2']}, 'transp1': {'type': 'transport', 'cost': 0.0, 'constraints': True, 'inFlow': {'mat1_sup1': {'qty': 0.0, 'item': 'mat1'}, 'mat2_sup1': {'qty': 0.0, 'item': 'mat2'}, 'mat1_sup2': {'qty': 0.0, 'item': 'mat1'}, 'mat2_sup2': {'qty': 0.0, 'item': 'mat2'}}, 'outFlow': {'mat1_manuf1': {'qty': 0.0, 'item': 'mat1'}, 'mat2_manuf1': {'qty': 0.0, 'item': 'mat2'}}}, 'transp2': {'type': 'transport', 'cost': 500.0, 'constraints': True, 'inFlow': {'mat1_sup1': {'qty': 1000.0, 'item': 'mat1'}, 'mat2_sup1': {'qty': 2000.0, 'item': 'mat2'}, 'mat1_sup2': {'qty': 0.0, 'item': 'mat1'}, 'mat2_sup2': {'qty': 0.0, 'item': 'mat2'}}, 'outFlow': {'mat1_manuf1': {'qty': 1000.0, 'item': 'mat1'}, 'mat2_manuf1': {'qty': 2000.0, 'item': 'mat2'}}}}}
+
+DEBUG: constraints:
+True
