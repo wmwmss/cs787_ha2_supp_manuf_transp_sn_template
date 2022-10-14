@@ -3522,3 +3522,1094 @@ DEBUG:parso.python.diff:line_lengths old: 1; new: 1
 DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
 DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
 DEBUG:parso.python.diff:diff parser end
+DEBUG:pyomo.core:Constructing ConcreteModel 'ConcreteModel', from data=None
+DEBUG:pyomo.core:Constructing RangeSet, name=FiniteScalarRangeSet, from data=None
+DEBUG:pyomo.core:Constructing RangeSet, name=FiniteScalarRangeSet, from data=None
+DEBUG:pyomo.core:Constructing IndexedVar 'real' on [Model] from data=None
+DEBUG:pyomo.core:Constructing Variable, name=real, from data=None
+DEBUG:pyomo.core:Constructed component ''[Model].real'':
+real : Size=0, Index=realI
+    Key : Lower : Value : Upper : Fixed : Stale : Domain
+
+DEBUG:pyomo.core:Constructing IndexedVar 'int' on [Model] from data=None
+DEBUG:pyomo.core:Constructing Variable, name=int, from data=None
+DEBUG:pyomo.core:Constructed component ''[Model].int'':
+int : Size=4, Index=intI
+    Key : Lower : Value : Upper : Fixed : Stale : Domain
+      0 :  None :  None :  None : False :  True : Integers
+      1 :  None :  None :  None : False :  True : Integers
+      2 :  None :  None :  None : False :  True : Integers
+      3 :  None :  None :  None : False :  True : Integers
+
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:pyomo.core:Constructing ConcreteModel 'ConcreteModel', from data=None
+DEBUG:pyomo.core:Constructing RangeSet, name=FiniteScalarRangeSet, from data=None
+DEBUG:pyomo.core:Constructing RangeSet, name=FiniteScalarRangeSet, from data=None
+DEBUG:pyomo.core:Constructing IndexedVar 'real' on [Model] from data=None
+DEBUG:pyomo.core:Constructing Variable real
+DEBUG:pyomo.core:Constructed component ''[Model].real'':
+real : Size=0, Index=realI
+    Key : Lower : Value : Upper : Fixed : Stale : Domain
+
+DEBUG:pyomo.core:Constructing IndexedVar 'int' on [Model] from data=None
+DEBUG:pyomo.core:Constructing Variable int
+DEBUG:pyomo.core:Constructed component ''[Model].int'':
+int : Size=4, Index=intI
+    Key : Lower : Value : Upper : Fixed : Stale : Domain
+      0 :  None :  None :  None : False :  True : Integers
+      1 :  None :  None :  None : False :  True : Integers
+      2 :  None :  None :  None : False :  True : Integers
+      3 :  None :  None :  None : False :  True : Integers
+
+DEBUG:pyomo.core:Constructing RangeSet, name=FiniteScalarRangeSet, from data=None
+DEBUG:pyomo.core:Constructing IndexedConstraint 'pyomoConstraint' on [Model] from data=None
+DEBUG:pyomo.core:Constructing constraint pyomoConstraint
+DEBUG:pyomo.core:Constructed component ''[Model].pyomoConstraint'':
+pyomoConstraint : Size=8, Index=constrIndex, Active=True
+    Key : Lower : Body   : Upper : Active
+      0 :   0.0 : int[0] :  +Inf :   True
+      1 :   0.0 : int[0] :  +Inf :   True
+      2 :   0.0 : int[1] :  +Inf :   True
+      3 :   0.0 : int[1] :  +Inf :   True
+      4 :   0.0 : int[2] :  +Inf :   True
+      5 :   0.0 : int[2] :  +Inf :   True
+      6 :   0.0 : int[3] :  +Inf :   True
+      7 :   0.0 : int[3] :  +Inf :   True
+
+DEBUG:pyomo.core:Constructing ScalarObjective 'pyomoObjective' on [Model] from data=None
+DEBUG:pyomo.core:Constructing objective pyomoObjective
+DEBUG:pyomo.core:Constructed component ''[Model].pyomoObjective'':
+pyomoObjective : Size=1, Index=None, Active=True
+    Key  : Active : Sense    : Expression
+    None :   True : minimize : 5*int[0] + 4*int[1] + 2*int[2] + 3*int[3]
+
+WARNING:pyomo.solvers:Could not locate the 'glpsol' executable, which is required for solver 'glpk'
+DEBUG:pyomo.core:Constructing ConcreteModel 'ConcreteModel', from data=None
+DEBUG:pyomo.core:Constructing RangeSet, name=FiniteScalarRangeSet, from data=None
+DEBUG:pyomo.core:Constructing RangeSet, name=FiniteScalarRangeSet, from data=None
+DEBUG:pyomo.core:Constructing IndexedVar 'real' on [Model] from data=None
+DEBUG:pyomo.core:Constructing Variable real
+DEBUG:pyomo.core:Constructed component ''[Model].real'':
+real : Size=0, Index=realI
+    Key : Lower : Value : Upper : Fixed : Stale : Domain
+
+DEBUG:pyomo.core:Constructing IndexedVar 'int' on [Model] from data=None
+DEBUG:pyomo.core:Constructing Variable int
+DEBUG:pyomo.core:Constructed component ''[Model].int'':
+int : Size=4, Index=intI
+    Key : Lower : Value : Upper : Fixed : Stale : Domain
+      0 :  None :  None :  None : False :  True : Integers
+      1 :  None :  None :  None : False :  True : Integers
+      2 :  None :  None :  None : False :  True : Integers
+      3 :  None :  None :  None : False :  True : Integers
+
+DEBUG:pyomo.core:Constructing RangeSet, name=FiniteScalarRangeSet, from data=None
+DEBUG:pyomo.core:Constructing IndexedConstraint 'pyomoConstraint' on [Model] from data=None
+DEBUG:pyomo.core:Constructing constraint pyomoConstraint
+DEBUG:pyomo.core:Constructed component ''[Model].pyomoConstraint'':
+pyomoConstraint : Size=8, Index=constrIndex, Active=True
+    Key : Lower : Body   : Upper : Active
+      0 :   0.0 : int[0] :  +Inf :   True
+      1 :   0.0 : int[0] :  +Inf :   True
+      2 :   0.0 : int[1] :  +Inf :   True
+      3 :   0.0 : int[1] :  +Inf :   True
+      4 :   0.0 : int[2] :  +Inf :   True
+      5 :   0.0 : int[2] :  +Inf :   True
+      6 :   0.0 : int[3] :  +Inf :   True
+      7 :   0.0 : int[3] :  +Inf :   True
+
+DEBUG:pyomo.core:Constructing ScalarObjective 'pyomoObjective' on [Model] from data=None
+DEBUG:pyomo.core:Constructing objective pyomoObjective
+DEBUG:pyomo.core:Constructed component ''[Model].pyomoObjective'':
+pyomoObjective : Size=1, Index=None, Active=True
+    Key  : Active : Sense    : Expression
+    None :   True : minimize : 5*int[0] + 4*int[1] + 2*int[2] + 3*int[3]
+
+DEBUG:pyomo.core:Writing model 'unknown' to file '/var/folders/f6/hs418_dj6_9bj1dfhs0fn7zc0000gp/T/tmp5x4792h6.pyomo.lp' with format cpxlp
+DEBUG:pyomo.opt:Running ['/Users/ethan/opt/anaconda3/bin/glpsol', '--write', '/var/folders/f6/hs418_dj6_9bj1dfhs0fn7zc0000gp/T/tmp30fsy65b.glpk.raw', '--wglp', '/var/folders/f6/hs418_dj6_9bj1dfhs0fn7zc0000gp/T/tmp3fxfmz87.glpk.glp', '--cpxlp', '/var/folders/f6/hs418_dj6_9bj1dfhs0fn7zc0000gp/T/tmp5x4792h6.pyomo.lp']
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:pyomo.core:Constructing ConcreteModel 'ConcreteModel', from data=None
+DEBUG:pyomo.core:Constructing RangeSet, name=FiniteScalarRangeSet, from data=None
+DEBUG:pyomo.core:Constructing RangeSet, name=FiniteScalarRangeSet, from data=None
+DEBUG:pyomo.core:Constructing IndexedVar 'real' on [Model] from data=None
+DEBUG:pyomo.core:Constructing Variable real
+DEBUG:pyomo.core:Constructed component ''[Model].real'':
+real : Size=0, Index=realI
+    Key : Lower : Value : Upper : Fixed : Stale : Domain
+
+DEBUG:pyomo.core:Constructing IndexedVar 'int' on [Model] from data=None
+DEBUG:pyomo.core:Constructing Variable int
+DEBUG:pyomo.core:Constructed component ''[Model].int'':
+int : Size=4, Index=intI
+    Key : Lower : Value : Upper : Fixed : Stale : Domain
+      0 :  None :  None :  None : False :  True : Integers
+      1 :  None :  None :  None : False :  True : Integers
+      2 :  None :  None :  None : False :  True : Integers
+      3 :  None :  None :  None : False :  True : Integers
+
+DEBUG:pyomo.core:Constructing ConcreteModel 'ConcreteModel', from data=None
+DEBUG:pyomo.core:Constructing RangeSet, name=FiniteScalarRangeSet, from data=None
+DEBUG:pyomo.core:Constructing RangeSet, name=FiniteScalarRangeSet, from data=None
+DEBUG:pyomo.core:Constructing IndexedVar 'real' on [Model] from data=None
+DEBUG:pyomo.core:Constructing Variable real
+DEBUG:pyomo.core:Constructed component ''[Model].real'':
+real : Size=0, Index=realI
+    Key : Lower : Value : Upper : Fixed : Stale : Domain
+
+DEBUG:pyomo.core:Constructing IndexedVar 'int' on [Model] from data=None
+DEBUG:pyomo.core:Constructing Variable int
+DEBUG:pyomo.core:Constructed component ''[Model].int'':
+int : Size=4, Index=intI
+    Key : Lower : Value : Upper : Fixed : Stale : Domain
+      0 :  None :  None :  None : False :  True : Integers
+      1 :  None :  None :  None : False :  True : Integers
+      2 :  None :  None :  None : False :  True : Integers
+      3 :  None :  None :  None : False :  True : Integers
+
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:pyomo.core:Constructing ConcreteModel 'ConcreteModel', from data=None
+DEBUG:pyomo.core:Constructing RangeSet, name=FiniteScalarRangeSet, from data=None
+DEBUG:pyomo.core:Constructing RangeSet, name=FiniteScalarRangeSet, from data=None
+DEBUG:pyomo.core:Constructing IndexedVar 'real' on [Model] from data=None
+DEBUG:pyomo.core:Constructing Variable real
+DEBUG:pyomo.core:Constructed component ''[Model].real'':
+real : Size=0, Index=realI
+    Key : Lower : Value : Upper : Fixed : Stale : Domain
+
+DEBUG:pyomo.core:Constructing IndexedVar 'int' on [Model] from data=None
+DEBUG:pyomo.core:Constructing Variable int
+DEBUG:pyomo.core:Constructed component ''[Model].int'':
+int : Size=4, Index=intI
+    Key : Lower : Value : Upper : Fixed : Stale : Domain
+      0 :  None :  None :  None : False :  True : Integers
+      1 :  None :  None :  None : False :  True : Integers
+      2 :  None :  None :  None : False :  True : Integers
+      3 :  None :  None :  None : False :  True : Integers
+
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:pyomo.core:Constructing ConcreteModel 'ConcreteModel', from data=None
+DEBUG:pyomo.core:Constructing RangeSet, name=FiniteScalarRangeSet, from data=None
+DEBUG:pyomo.core:Constructing RangeSet, name=FiniteScalarRangeSet, from data=None
+DEBUG:pyomo.core:Constructing IndexedVar 'real' on [Model] from data=None
+DEBUG:pyomo.core:Constructing Variable real
+DEBUG:pyomo.core:Constructed component ''[Model].real'':
+real : Size=0, Index=realI
+    Key : Lower : Value : Upper : Fixed : Stale : Domain
+
+DEBUG:pyomo.core:Constructing IndexedVar 'int' on [Model] from data=None
+DEBUG:pyomo.core:Constructing Variable int
+DEBUG:pyomo.core:Constructed component ''[Model].int'':
+int : Size=4, Index=intI
+    Key : Lower : Value : Upper : Fixed : Stale : Domain
+      0 :  None :  None :  None : False :  True : Integers
+      1 :  None :  None :  None : False :  True : Integers
+      2 :  None :  None :  None : False :  True : Integers
+      3 :  None :  None :  None : False :  True : Integers
+
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:pyomo.core:Constructing ConcreteModel 'ConcreteModel', from data=None
+DEBUG:pyomo.core:Constructing RangeSet, name=FiniteScalarRangeSet, from data=None
+DEBUG:pyomo.core:Constructing RangeSet, name=FiniteScalarRangeSet, from data=None
+DEBUG:pyomo.core:Constructing IndexedVar 'real' on [Model] from data=None
+DEBUG:pyomo.core:Constructing Variable real
+DEBUG:pyomo.core:Constructed component ''[Model].real'':
+real : Size=0, Index=realI
+    Key : Lower : Value : Upper : Fixed : Stale : Domain
+
+DEBUG:pyomo.core:Constructing IndexedVar 'int' on [Model] from data=None
+DEBUG:pyomo.core:Constructing Variable int
+DEBUG:pyomo.core:Constructed component ''[Model].int'':
+int : Size=4, Index=intI
+    Key : Lower : Value : Upper : Fixed : Stale : Domain
+      0 :  None :  None :  None : False :  True : Integers
+      1 :  None :  None :  None : False :  True : Integers
+      2 :  None :  None :  None : False :  True : Integers
+      3 :  None :  None :  None : False :  True : Integers
+
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:pyomo.core:Constructing ConcreteModel 'ConcreteModel', from data=None
+DEBUG:pyomo.core:Constructing RangeSet, name=FiniteScalarRangeSet, from data=None
+DEBUG:pyomo.core:Constructing RangeSet, name=FiniteScalarRangeSet, from data=None
+DEBUG:pyomo.core:Constructing IndexedVar 'real' on [Model] from data=None
+DEBUG:pyomo.core:Constructing Variable real
+DEBUG:pyomo.core:Constructed component ''[Model].real'':
+real : Size=0, Index=realI
+    Key : Lower : Value : Upper : Fixed : Stale : Domain
+
+DEBUG:pyomo.core:Constructing IndexedVar 'int' on [Model] from data=None
+DEBUG:pyomo.core:Constructing Variable int
+DEBUG:pyomo.core:Constructed component ''[Model].int'':
+int : Size=4, Index=intI
+    Key : Lower : Value : Upper : Fixed : Stale : Domain
+      0 :  None :  None :  None : False :  True : Integers
+      1 :  None :  None :  None : False :  True : Integers
+      2 :  None :  None :  None : False :  True : Integers
+      3 :  None :  None :  None : False :  True : Integers
+
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:pyomo.core:Constructing ConcreteModel 'ConcreteModel', from data=None
+DEBUG:pyomo.core:Constructing RangeSet, name=FiniteScalarRangeSet, from data=None
+DEBUG:pyomo.core:Constructing RangeSet, name=FiniteScalarRangeSet, from data=None
+DEBUG:pyomo.core:Constructing IndexedVar 'real' on [Model] from data=None
+DEBUG:pyomo.core:Constructing Variable real
+DEBUG:pyomo.core:Constructed component ''[Model].real'':
+real : Size=0, Index=realI
+    Key : Lower : Value : Upper : Fixed : Stale : Domain
+
+DEBUG:pyomo.core:Constructing IndexedVar 'int' on [Model] from data=None
+DEBUG:pyomo.core:Constructing Variable int
+DEBUG:pyomo.core:Constructed component ''[Model].int'':
+int : Size=4, Index=intI
+    Key : Lower : Value : Upper : Fixed : Stale : Domain
+      0 :  None :  None :  None : False :  True : Integers
+      1 :  None :  None :  None : False :  True : Integers
+      2 :  None :  None :  None : False :  True : Integers
+      3 :  None :  None :  None : False :  True : Integers
+
+ERROR:pyomo.core:evaluating object as numeric value: int[0]
+    (object: <class 'pyomo.core.base.var._GeneralVarData'>)
+No value for uninitialized NumericValue object int[0]
+ERROR:pyomo.core:evaluating object as numeric value: 1000  <=  int[0] + int[2]
+    (object: <class 'pyomo.core.expr.logical_expr.InequalityExpression'>)
+No value for uninitialized NumericValue object int[0]
+DEBUG:pyomo.core:Constructing ConcreteModel 'ConcreteModel', from data=None
+DEBUG:pyomo.core:Constructing RangeSet, name=FiniteScalarRangeSet, from data=None
+DEBUG:pyomo.core:Constructing RangeSet, name=FiniteScalarRangeSet, from data=None
+DEBUG:pyomo.core:Constructing IndexedVar 'real' on [Model] from data=None
+DEBUG:pyomo.core:Constructing Variable real
+DEBUG:pyomo.core:Constructed component ''[Model].real'':
+real : Size=0, Index=realI
+    Key : Lower : Value : Upper : Fixed : Stale : Domain
+
+DEBUG:pyomo.core:Constructing IndexedVar 'int' on [Model] from data=None
+DEBUG:pyomo.core:Constructing Variable int
+DEBUG:pyomo.core:Constructed component ''[Model].int'':
+int : Size=4, Index=intI
+    Key : Lower : Value : Upper : Fixed : Stale : Domain
+      0 :  None :  None :  None : False :  True : Integers
+      1 :  None :  None :  None : False :  True : Integers
+      2 :  None :  None :  None : False :  True : Integers
+      3 :  None :  None :  None : False :  True : Integers
+
+ERROR:pyomo.core:evaluating object as numeric value: int[0]
+    (object: <class 'pyomo.core.base.var._GeneralVarData'>)
+No value for uninitialized NumericValue object int[0]
+ERROR:pyomo.core:evaluating object as numeric value: int[0] + int[2]
+    (object: <class 'pyomo.core.expr.numeric_expr.SumExpression'>)
+No value for uninitialized NumericValue object int[0]
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:pyomo.core:Constructing ConcreteModel 'ConcreteModel', from data=None
+DEBUG:pyomo.core:Constructing RangeSet, name=FiniteScalarRangeSet, from data=None
+DEBUG:pyomo.core:Constructing RangeSet, name=FiniteScalarRangeSet, from data=None
+DEBUG:pyomo.core:Constructing IndexedVar 'real' on [Model] from data=None
+DEBUG:pyomo.core:Constructing Variable real
+DEBUG:pyomo.core:Constructed component ''[Model].real'':
+real : Size=0, Index=realI
+    Key : Lower : Value : Upper : Fixed : Stale : Domain
+
+DEBUG:pyomo.core:Constructing IndexedVar 'int' on [Model] from data=None
+DEBUG:pyomo.core:Constructing Variable int
+DEBUG:pyomo.core:Constructed component ''[Model].int'':
+int : Size=4, Index=intI
+    Key : Lower : Value : Upper : Fixed : Stale : Domain
+      0 :  None :  None :  None : False :  True : Integers
+      1 :  None :  None :  None : False :  True : Integers
+      2 :  None :  None :  None : False :  True : Integers
+      3 :  None :  None :  None : False :  True : Integers
+
+ERROR:pyomo.core:evaluating object as numeric value: int[0]
+    (object: <class 'pyomo.core.base.var._GeneralVarData'>)
+No value for uninitialized NumericValue object int[0]
+ERROR:pyomo.core:evaluating object as numeric value: int[0] + int[2]
+    (object: <class 'pyomo.core.expr.numeric_expr.SumExpression'>)
+No value for uninitialized NumericValue object int[0]
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:pyomo.core:Constructing ConcreteModel 'ConcreteModel', from data=None
+DEBUG:pyomo.core:Constructing RangeSet, name=FiniteScalarRangeSet, from data=None
+DEBUG:pyomo.core:Constructing RangeSet, name=FiniteScalarRangeSet, from data=None
+DEBUG:pyomo.core:Constructing IndexedVar 'real' on [Model] from data=None
+DEBUG:pyomo.core:Constructing Variable real
+DEBUG:pyomo.core:Constructed component ''[Model].real'':
+real : Size=0, Index=realI
+    Key : Lower : Value : Upper : Fixed : Stale : Domain
+
+DEBUG:pyomo.core:Constructing IndexedVar 'int' on [Model] from data=None
+DEBUG:pyomo.core:Constructing Variable int
+DEBUG:pyomo.core:Constructed component ''[Model].int'':
+int : Size=4, Index=intI
+    Key : Lower : Value : Upper : Fixed : Stale : Domain
+      0 :  None :  None :  None : False :  True : Integers
+      1 :  None :  None :  None : False :  True : Integers
+      2 :  None :  None :  None : False :  True : Integers
+      3 :  None :  None :  None : False :  True : Integers
+
+DEBUG:pyomo.core:Constructing ConcreteModel 'ConcreteModel', from data=None
+DEBUG:pyomo.core:Constructing RangeSet, name=FiniteScalarRangeSet, from data=None
+DEBUG:pyomo.core:Constructing RangeSet, name=FiniteScalarRangeSet, from data=None
+DEBUG:pyomo.core:Constructing IndexedVar 'real' on [Model] from data=None
+DEBUG:pyomo.core:Constructing Variable real
+DEBUG:pyomo.core:Constructed component ''[Model].real'':
+real : Size=0, Index=realI
+    Key : Lower : Value : Upper : Fixed : Stale : Domain
+
+DEBUG:pyomo.core:Constructing IndexedVar 'int' on [Model] from data=None
+DEBUG:pyomo.core:Constructing Variable int
+DEBUG:pyomo.core:Constructed component ''[Model].int'':
+int : Size=4, Index=intI
+    Key : Lower : Value : Upper : Fixed : Stale : Domain
+      0 :  None :  None :  None : False :  True : Integers
+      1 :  None :  None :  None : False :  True : Integers
+      2 :  None :  None :  None : False :  True : Integers
+      3 :  None :  None :  None : False :  True : Integers
+
+ERROR:pyomo.core:evaluating object as numeric value: int[0]
+    (object: <class 'pyomo.core.base.var._GeneralVarData'>)
+No value for uninitialized NumericValue object int[0]
+ERROR:pyomo.core:evaluating object as numeric value: int[0] + int[2]
+    (object: <class 'pyomo.core.expr.numeric_expr.SumExpression'>)
+No value for uninitialized NumericValue object int[0]
+DEBUG:pyomo.core:Constructing ConcreteModel 'ConcreteModel', from data=None
+DEBUG:pyomo.core:Constructing RangeSet, name=FiniteScalarRangeSet, from data=None
+DEBUG:pyomo.core:Constructing RangeSet, name=FiniteScalarRangeSet, from data=None
+DEBUG:pyomo.core:Constructing IndexedVar 'real' on [Model] from data=None
+DEBUG:pyomo.core:Constructing Variable real
+DEBUG:pyomo.core:Constructed component ''[Model].real'':
+real : Size=0, Index=realI
+    Key : Lower : Value : Upper : Fixed : Stale : Domain
+
+DEBUG:pyomo.core:Constructing IndexedVar 'int' on [Model] from data=None
+DEBUG:pyomo.core:Constructing Variable int
+DEBUG:pyomo.core:Constructed component ''[Model].int'':
+int : Size=4, Index=intI
+    Key : Lower : Value : Upper : Fixed : Stale : Domain
+      0 :  None :  None :  None : False :  True : Integers
+      1 :  None :  None :  None : False :  True : Integers
+      2 :  None :  None :  None : False :  True : Integers
+      3 :  None :  None :  None : False :  True : Integers
+
+ERROR:pyomo.core:evaluating object as numeric value: int[0]
+    (object: <class 'pyomo.core.base.var._GeneralVarData'>)
+No value for uninitialized NumericValue object int[0]
+ERROR:pyomo.core:evaluating object as numeric value: int[0] + int[2]
+    (object: <class 'pyomo.core.expr.numeric_expr.SumExpression'>)
+No value for uninitialized NumericValue object int[0]
+DEBUG:pyomo.core:Constructing ConcreteModel 'ConcreteModel', from data=None
+DEBUG:pyomo.core:Constructing RangeSet, name=FiniteScalarRangeSet, from data=None
+DEBUG:pyomo.core:Constructing RangeSet, name=FiniteScalarRangeSet, from data=None
+DEBUG:pyomo.core:Constructing IndexedVar 'real' on [Model] from data=None
+DEBUG:pyomo.core:Constructing Variable real
+DEBUG:pyomo.core:Constructed component ''[Model].real'':
+real : Size=0, Index=realI
+    Key : Lower : Value : Upper : Fixed : Stale : Domain
+
+DEBUG:pyomo.core:Constructing IndexedVar 'int' on [Model] from data=None
+DEBUG:pyomo.core:Constructing Variable int
+DEBUG:pyomo.core:Constructed component ''[Model].int'':
+int : Size=4, Index=intI
+    Key : Lower : Value : Upper : Fixed : Stale : Domain
+      0 :  None :  None :  None : False :  True : Integers
+      1 :  None :  None :  None : False :  True : Integers
+      2 :  None :  None :  None : False :  True : Integers
+      3 :  None :  None :  None : False :  True : Integers
+
+ERROR:pyomo.core:evaluating object as numeric value: int[0]
+    (object: <class 'pyomo.core.base.var._GeneralVarData'>)
+No value for uninitialized NumericValue object int[0]
+ERROR:pyomo.core:evaluating object as numeric value: int[0] + int[2]
+    (object: <class 'pyomo.core.expr.numeric_expr.SumExpression'>)
+No value for uninitialized NumericValue object int[0]
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:parso.python.diff:diff parser start
+DEBUG:parso.python.diff:line_lengths old: 1; new: 1
+DEBUG:parso.python.diff:-> code[replace] old[1:1] new[1:1]
+DEBUG:parso.python.diff:parse_part from 1 to 1 (to 0 in part parser)
+DEBUG:parso.python.diff:diff parser end
+DEBUG:pyomo.core:Constructing ConcreteModel 'ConcreteModel', from data=None
+DEBUG:pyomo.core:Constructing RangeSet, name=FiniteScalarRangeSet, from data=None
+DEBUG:pyomo.core:Constructing RangeSet, name=FiniteScalarRangeSet, from data=None
+DEBUG:pyomo.core:Constructing IndexedVar 'real' on [Model] from data=None
+DEBUG:pyomo.core:Constructing Variable real
+DEBUG:pyomo.core:Constructed component ''[Model].real'':
+real : Size=0, Index=realI
+    Key : Lower : Value : Upper : Fixed : Stale : Domain
+
+DEBUG:pyomo.core:Constructing IndexedVar 'int' on [Model] from data=None
+DEBUG:pyomo.core:Constructing Variable int
+DEBUG:pyomo.core:Constructed component ''[Model].int'':
+int : Size=4, Index=intI
+    Key : Lower : Value : Upper : Fixed : Stale : Domain
+      0 :  None :  None :  None : False :  True : Integers
+      1 :  None :  None :  None : False :  True : Integers
+      2 :  None :  None :  None : False :  True : Integers
+      3 :  None :  None :  None : False :  True : Integers
+
+DEBUG:pyomo.core:Constructing ConcreteModel 'ConcreteModel', from data=None
+DEBUG:pyomo.core:Constructing RangeSet, name=FiniteScalarRangeSet, from data=None
+DEBUG:pyomo.core:Constructing RangeSet, name=FiniteScalarRangeSet, from data=None
+DEBUG:pyomo.core:Constructing IndexedVar 'real' on [Model] from data=None
+DEBUG:pyomo.core:Constructing Variable real
+DEBUG:pyomo.core:Constructed component ''[Model].real'':
+real : Size=0, Index=realI
+    Key : Lower : Value : Upper : Fixed : Stale : Domain
+
+DEBUG:pyomo.core:Constructing IndexedVar 'int' on [Model] from data=None
+DEBUG:pyomo.core:Constructing Variable int
+DEBUG:pyomo.core:Constructed component ''[Model].int'':
+int : Size=4, Index=intI
+    Key : Lower : Value : Upper : Fixed : Stale : Domain
+      0 :  None :  None :  None : False :  True : Integers
+      1 :  None :  None :  None : False :  True : Integers
+      2 :  None :  None :  None : False :  True : Integers
+      3 :  None :  None :  None : False :  True : Integers
+
+ERROR:pyomo.core:evaluating object as numeric value: int[0]
+    (object: <class 'pyomo.core.base.var._GeneralVarData'>)
+No value for uninitialized NumericValue object int[0]
+ERROR:pyomo.core:evaluating object as numeric value: int[0] + int[2]
+    (object: <class 'pyomo.core.expr.numeric_expr.SumExpression'>)
+No value for uninitialized NumericValue object int[0]

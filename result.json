@@ -1,0 +1,34 @@
+{
+    "Problem": [
+        {
+            "Lower bound": 0.0,
+            "Name": "unknown",
+            "Number of constraints": 9,
+            "Number of nonzeros": 9,
+            "Number of objectives": 1,
+            "Number of variables": 5,
+            "Sense": "minimize",
+            "Upper bound": 0.0
+        }
+    ],
+    "Solution": [
+        {
+            "number of solutions": 0,
+            "number of solutions displayed": 0
+        }
+    ],
+    "Solver": [
+        {
+            "Error rc": 0,
+            "Statistics": {
+                "Branch and bound": {
+                    "Number of bounded subproblems": 0,
+                    "Number of created subproblems": 0
+                }
+            },
+            "Status": "ok",
+            "Termination condition": "optimal",
+            "Time": 0.013699769973754883
+        }
+    ]
+}

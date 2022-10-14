@@ -1,6 +1,7 @@
 import copy
 import json
-import importlib.util
+#import importlib.util
+#from importlib import util
 import sys
 # sys.path.append("../aaa_dgalPy")
 sys.path.append("./lib")
@@ -12,18 +13,21 @@ sys.path.append("..")
 # the following is a useful Boolean function returning True if all qty's in newFlow are non-negative
 # and greater than or equal to the lower bounds (lb) in flow (inFlow or outFlow)
 # replace below with correct implementation if you'd like to use it in analytic models below
-def flowBoundConstraint(flow,newFlow):
-    nonNegativityConstraint = dgal.all([True for mat in newFlow if newFlow[mat]['qty']>=0])
+# def flowBoundConstraint(flow,newFlow):
+#     nonNegativityConstraint = dgal.all([True for mat in newFlow if newFlow[mat]['qty']>=0])
+#
+#     try:
+#         lbs = [mat['lb'] for mat in flow]
+#     except:
+#         lbConstraint = dgal.all([True for mat in newFlow if newFlow[mat]['qty']>=flow[mat]['lb']])
+#     else:
+#         lbConstraint = dgal.all([True for mat in newFlow if newFlow[mat]['qty']>=flow[mat]['qty']])
+#
+#     return (nonNegativityConstraint and lbConstraint)
 
-    try:
-        lbs = [mat['lb'] for mat in flow]
-    except:
-        lbConstraint = dgal.all([True for mat in newFlow if newFlow[mat]['qty']>=flow[mat]['lb']])
-    else:
-        lbConstraint = dgal.all([True for mat in newFlow if newFlow[mat]['qty']>=flow[mat]['qty']])
-
-    return (nonNegativityConstraint and lbConstraint)
-
+def flowBoundConstraint(flowBounds,flow):
+    c = dgal.all([ [flow[f]["qty"] >= 0, flow[f]["qty"] >= flowBounds[f]["lb"]] for f in flow])
+    return(c)
 #--------------------------------------------------------------------
 #assumptions on input data
 #1. root service inFlows and outFlows are disjoint
